@@ -8,8 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
-namespace FileManagerLite
+namespace FileManager
 {
     enum TypeItem
     {
@@ -17,6 +18,7 @@ namespace FileManagerLite
         folder,
         file
     }
+
     public partial class Form : System.Windows.Forms.Form
     {
         private TreeNode _lastSelectNode;
@@ -27,8 +29,18 @@ namespace FileManagerLite
                 toolStripComboBox.Items.Add(view);
 
             toolStripComboBox.SelectedIndex = 0;
+
+            TreeNode topNode = new TreeNode("That computer", 0, 0, GetTreeNodeDrives().ToArray());
+            topNode.ImageIndex = 0;
+            topNode.Name = "Computer";
+            topNode.SelectedImageIndex = 0;
+            topNode.Text = "My computer";
+
+            this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {topNode});
+            treeView.TopNode = topNode;
             _lastSelectNode = treeView.TopNode;
-        }
+            _lastSelectNode.Expand();
+       }
 
         private void treeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
         {
@@ -66,25 +78,45 @@ namespace FileManagerLite
 
         private void listView_DoubleClick(object sender, EventArgs e)
         {
-            var selectedItems = listView.SelectedItems;
-            if (selectedItems.Count == 1)
+            try
             {
-                foreach (TreeNode node in _lastSelectNode.Nodes)
+                if (listView.SelectedItems.Count == 1)
                 {
-                    if (node.Text == selectedItems[0].Text)
+                    string path = GetFullPathForSelectedNode(_lastSelectNode) + listView.SelectedItems[0].Name;
+                    if (listView.SelectedItems[0].Group == listView.Groups["Files"])
                     {
-                        node.Expand();
-                        treeView.SelectedNode = node;
-                        break;
-                    }else if (node.Text == "Node")
+                        if (File.Exists(path))
+                        {
+                            Process.Start(GetFullPathForSelectedNode(_lastSelectNode) + listView.SelectedItems[0].Name);
+                        }
+                    }
+                    else if (listView.SelectedItems[0].Group == listView.Groups["Folders"])
                     {
-                        _lastSelectNode.Expand();
-                        listView_DoubleClick(sender, e);
-                        break;
+                        foreach (TreeNode node in _lastSelectNode.Nodes)
+                        {
+                            TreeNode[] treeNode = _lastSelectNode.Nodes.Find(listView.SelectedItems[0].Name, false);
+                            if (node.Text == listView.SelectedItems[0].Name)
+                            {
+                                node.Expand();
+                                treeView.SelectedNode = node;
+                                break;
+                            }
+                            else if (node.Text == "Node")
+                            {
+                                _lastSelectNode.Expand();
+                                listView_DoubleClick(sender, e);
+                                break;
+                            }
+
+                        }
                     }
                 }
-                
             }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
         }
 
 
@@ -112,6 +144,7 @@ namespace FileManagerLite
             foreach (var file in files)
             {
                 var listViewItem = new ListViewItem();
+                listViewItem.Name = Path.GetFileName(file);
                 listViewItem.Text = Path.GetFileName(file);
                 listViewItem.ImageIndex = 1;
                 listViewItem.Group = listView.Groups["Files"];
@@ -128,6 +161,7 @@ namespace FileManagerLite
             foreach (var directory in directories)
             {
                 var listViewItem = new ListViewItem();
+                listViewItem.Name = Path.GetFileName(directory);
                 listViewItem.Text = Path.GetFileName(directory);
                 listViewItem.ImageIndex = 2;
                 listViewItem.Group = listView.Groups["Folders"];
@@ -142,6 +176,7 @@ namespace FileManagerLite
             foreach (var drive in GetLogicalDrives())
             {
                 var listViewItem = new ListViewItem();
+                listViewItem.Name = drive;
                 listViewItem.Text = drive;
                 listViewItem.ImageIndex = 3;
                 listViewItem.Group = listView.Groups["Drives"];
@@ -153,46 +188,43 @@ namespace FileManagerLite
 
 
         #region TreeView
-        private void SetTreeViewExpandList(TreeNode _node)
+        private void SetTreeViewExpandList(TreeNode node)
         {
-            var node = _node;
-            if (node.Nodes.Count == 1 && node.Nodes[0].Text == "Node")
+            if (node.Nodes.Count == 1)
             {
                 node.Nodes.Clear();
             }
-            if (treeView.TopNode == node)
-            {
-                treeView.TopNode.Nodes.AddRange(GetTreeNodeDrives().ToArray());
-            }
             else
             {
-                node.Nodes.AddRange(GetTreeNodeDirectories(node).ToArray());
+                node.Nodes.AddRange(GetTreeNodeDirectories(node.Text).ToArray());
             }
         }
 
-        private List<TreeNode> GetTreeNodeDirectories(TreeNode node)
-        {
-            List<TreeNode> emptyTreeNode;
-
-            List<TreeNode> newTreeNodeList = new List<TreeNode>(GetDirectories(GetFullPathForSelectedNode(node)).Count);
-            foreach (var drive in GetDirectories(GetFullPathForSelectedNode(node)))
+        private List<TreeNode> GetTreeNodeDirectories(string fullPath)
+        {   
+            List<TreeNode> newTreeNodeList = new List<TreeNode>(GetDirectories(fullPath).Count);
+            foreach (var directory in GetDirectories(fullPath))
             {
-                emptyTreeNode = new List<TreeNode>(1);
-                emptyTreeNode.Add(new TreeNode("Node"));
-                newTreeNodeList.Add(new TreeNode(Path.GetFileName(drive), 2, 2, emptyTreeNode.ToArray()));
+                TreeNode newTreeNode = new TreeNode(Path.GetFileName(directory), 2, 2)
+                {
+                    Name = Path.GetFileName(directory),
+                    Tag = fullPath
+                };
+               // newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(fullPath + @"\" + newTreeNode.Name).ToArray());
+                newTreeNodeList.Add(newTreeNode);
             }
             return newTreeNodeList;
         }
 
         private List<TreeNode> GetTreeNodeDrives()
         {
-            List<TreeNode> emptyTreeNode;
             List<TreeNode> newTreeNodeList = new List<TreeNode>(GetLogicalDrives().Count);
             foreach (var drive in GetLogicalDrives())
             {
-                emptyTreeNode = new List<TreeNode>(1);
-                emptyTreeNode.Add(new TreeNode("Node"));
-                newTreeNodeList.Add(new TreeNode(drive, 3, 3, emptyTreeNode.ToArray()));
+                TreeNode newTreeNode = new TreeNode(drive, 3, 3);
+                newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(newTreeNode.Text).ToArray());
+                newTreeNode.Name = drive;
+                newTreeNodeList.Add(newTreeNode);
             }
             return newTreeNodeList;
         }
@@ -203,7 +235,7 @@ namespace FileManagerLite
             TreeNode prevNode = node.Parent;
             if (prevNode.Text != null)
             {
-                while (prevNode.Text != "That computer")
+                while (prevNode != treeView.TopNode)
                 {
                     fullPath = new StringBuilder(prevNode.Text + @"\" + fullPath);
                     prevNode = prevNode.Parent;
@@ -232,27 +264,7 @@ namespace FileManagerLite
             {
                 directories.AddRange(Directory.GetDirectories(fullPath.ToString()));
             }
-            catch (UnauthorizedAccessException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentNullException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (PathTooLongException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (DirectoryNotFoundException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (IOException er)
+            catch (Exception er)
             {
                 MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -266,30 +278,11 @@ namespace FileManagerLite
             {
                 files.AddRange(Directory.GetFiles(fullPath));
             }
-            catch (UnauthorizedAccessException er)
+            catch (Exception er)
             {
                 MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (ArgumentNullException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (PathTooLongException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (DirectoryNotFoundException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (IOException er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            finally { }
             files.Sort((x, y) => String.Compare(x, y, StringComparison.Ordinal));
             return files;
         }
@@ -309,8 +302,6 @@ namespace FileManagerLite
                 if (node.Text == selectedItems[0].Text)
                 {
                     string s = GetFullPathForSelectedNode(node);
-                    
-
                 }
             }
 
@@ -342,15 +333,20 @@ namespace FileManagerLite
 
         private void deleteFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = GetFullPathForSelectedNode(_lastSelectNode) + "\\NewFolder";
-
             try
             {
-                if (Directory.Exists(path))
+                var selectedItems = listView.SelectedItems;
+                foreach (ListViewItem selectedItem in listView.SelectedItems)
                 {
-                    Directory.Delete(path);
+                    string path = GetFullPathForSelectedNode(_lastSelectNode) + "\\" + selectedItem.Text;
+                    if (Directory.Exists(path))
+                    {
+                        Directory.Delete(path);
+                    }
+                    _lastSelectNode.Collapse();
+                    _lastSelectNode.Expand();
+                    SetListView(_lastSelectNode);
                 }
-                
             }
             catch (Exception exp)
             {
