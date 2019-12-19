@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-           
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Folders", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Files", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Drives", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Folders", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Files", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Drives", System.Windows.Forms.HorizontalAlignment.Left);
             this.treeView = new System.Windows.Forms.TreeView();
             this.smallIconsImageList = new System.Windows.Forms.ImageList(this.components);
             this.listView = new System.Windows.Forms.ListView();
@@ -43,9 +42,11 @@
             this.deleteFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.largeIconsImageList = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.groupsToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.contextMenuStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             // 
             this.treeView.ImageIndex = 0;
             this.treeView.ImageList = this.smallIconsImageList;
-            this.treeView.Location = new System.Drawing.Point(12, 28);
+            this.treeView.Location = new System.Drawing.Point(160, 28);
             this.treeView.Name = "treeView";
             this.treeView.SelectedImageIndex = 0;
             this.treeView.ShowRootLines = false;
@@ -76,20 +77,20 @@
             // listView
             // 
             this.listView.ContextMenuStrip = this.contextMenuStrip1;
-            listViewGroup4.Header = "Folders";
-            listViewGroup4.Name = "Folders";
-            listViewGroup5.Header = "Files";
-            listViewGroup5.Name = "Files";
-            listViewGroup6.Header = "Drives";
-            listViewGroup6.Name = "Drives";
+            listViewGroup1.Header = "Folders";
+            listViewGroup1.Name = "Folders";
+            listViewGroup2.Header = "Files";
+            listViewGroup2.Name = "Files";
+            listViewGroup3.Header = "Drives";
+            listViewGroup3.Name = "Drives";
             this.listView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.listView.HideSelection = false;
             this.listView.LargeImageList = this.largeIconsImageList;
-            this.listView.Location = new System.Drawing.Point(160, 28);
-            this.listView.Name = "listView";
+            this.listView.Location = new System.Drawing.Point(308, 28);
+            this.listView.Name = "FoldersListView";
             this.listView.Size = new System.Drawing.Size(669, 499);
             this.listView.SmallImageList = this.smallIconsImageList;
             this.listView.TabIndex = 1;
@@ -144,9 +145,19 @@
             this.groupsToolStripButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(841, 25);
+            this.toolStrip.Size = new System.Drawing.Size(992, 25);
             this.toolStrip.TabIndex = 3;
             this.toolStrip.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(36, 22);
+            this.toolStripButton1.Text = "Back";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripComboBox
             // 
@@ -167,21 +178,25 @@
             this.groupsToolStripButton.Text = "groups";
             this.groupsToolStripButton.Click += new System.EventHandler(this.groupsToolStripButton_Click);
             // 
-            // toolStripButton1
+            // listView1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton1.Text = "Back";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.listView1.HideSelection = false;
+            this.listView1.LargeImageList = this.largeIconsImageList;
+            this.listView1.Location = new System.Drawing.Point(12, 28);
+            this.listView1.Name = "ProfilesListView";
+            this.listView1.Size = new System.Drawing.Size(142, 499);
+            this.listView1.SmallImageList = this.smallIconsImageList;
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 539);
+            this.ClientSize = new System.Drawing.Size(992, 539);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.treeView);
@@ -212,6 +227,8 @@
         private System.Windows.Forms.ToolStripMenuItem createFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

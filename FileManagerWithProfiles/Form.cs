@@ -22,6 +22,7 @@ namespace FileManager
     public partial class Form : System.Windows.Forms.Form
     {
         private TreeNode _lastSelectNode;
+
         public Form()
         {
             InitializeComponent();
@@ -30,21 +31,46 @@ namespace FileManager
 
             toolStripComboBox.SelectedIndex = 0;
 
-            TreeNode topNode = new TreeNode("That computer", 0, 0, GetTreeNodeDrives().ToArray());
+
+
+            List<ListViewItem> newListViewItemList = new List<ListViewItem>(2);
+
+            ListViewItem listViewItem = new ListViewItem();
+            listViewItem.Name = "My Computer";
+            listViewItem.Text = "My Computer";
+            newListViewItemList.Add(listViewItem);
+
+            listViewItem = new ListViewItem();
+            listViewItem.Name = "Real Folder";
+            listViewItem.Text = "Real Folder";
+            newListViewItemList.Add(listViewItem);
+
+            listView1.Items.Clear();
+            listView1.Items.AddRange(newListViewItemList.ToArray());
+       }
+
+        private void initTopNode(string path)
+        {
+            treeView.Nodes.Clear();
+            TreeNode topNode = new TreeNode("1", 0, 0, GetTreeNodeDirectories(@"F:\music\1").ToArray());
             topNode.ImageIndex = 0;
             topNode.Name = "Computer";
             topNode.SelectedImageIndex = 0;
             topNode.Text = "My computer";
-
-            this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {topNode});
+            treeView.Nodes.AddRange(new TreeNode[] { topNode });
             treeView.TopNode = topNode;
             _lastSelectNode = treeView.TopNode;
             _lastSelectNode.Expand();
-       }
+        }
 
+        private TreeView getRealTreeView(string Path)
+        {
+            return null;
+        }
+        
         private void treeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
         {
-            SetTreeViewExpandList(e.Node);
+            
         }
 
         private void treeView_AfterCollapse(object sender, TreeViewEventArgs e)
@@ -82,33 +108,19 @@ namespace FileManager
             {
                 if (listView.SelectedItems.Count == 1)
                 {
-                    string path = GetFullPathForSelectedNode(_lastSelectNode) + listView.SelectedItems[0].Name;
+                    string path = GetFullPathForSelectedNode(_lastSelectNode) + @"\" + listView.SelectedItems[0].Name;
                     if (listView.SelectedItems[0].Group == listView.Groups["Files"])
                     {
                         if (File.Exists(path))
                         {
-                            Process.Start(GetFullPathForSelectedNode(_lastSelectNode) + listView.SelectedItems[0].Name);
+                            Process.Start(path);
                         }
                     }
                     else if (listView.SelectedItems[0].Group == listView.Groups["Folders"])
                     {
-                        foreach (TreeNode node in _lastSelectNode.Nodes)
-                        {
-                            TreeNode[] treeNode = _lastSelectNode.Nodes.Find(listView.SelectedItems[0].Name, false);
-                            if (node.Text == listView.SelectedItems[0].Name)
-                            {
-                                node.Expand();
-                                treeView.SelectedNode = node;
-                                break;
-                            }
-                            else if (node.Text == "Node")
-                            {
-                                _lastSelectNode.Expand();
-                                listView_DoubleClick(sender, e);
-                                break;
-                            }
-
-                        }
+                        TreeNode[] treeNode = _lastSelectNode.Nodes.Find(listView.SelectedItems[0].Name, false);
+                        treeNode[0].Expand();
+                        treeView.SelectedNode = treeNode[0];
                     }
                 }
             }
@@ -188,17 +200,6 @@ namespace FileManager
 
 
         #region TreeView
-        private void SetTreeViewExpandList(TreeNode node)
-        {
-            if (node.Nodes.Count == 1)
-            {
-                node.Nodes.Clear();
-            }
-            else
-            {
-                node.Nodes.AddRange(GetTreeNodeDirectories(node.Text).ToArray());
-            }
-        }
 
         private List<TreeNode> GetTreeNodeDirectories(string fullPath)
         {   
@@ -210,7 +211,7 @@ namespace FileManager
                     Name = Path.GetFileName(directory),
                     Tag = fullPath
                 };
-                newTreeNode.Nodes.AddRange(new List<TreeNode>().ToArray());
+                newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(fullPath + @"\" + newTreeNode.Name).ToArray());
                 newTreeNodeList.Add(newTreeNode);
             }
             return newTreeNodeList;
@@ -231,20 +232,7 @@ namespace FileManager
 
         private String GetFullPathForSelectedNode(TreeNode node)
         {
-            StringBuilder fullPath = new StringBuilder(node.Text);
-            TreeNode prevNode = node.Parent;
-            if (prevNode.Text != null)
-            {
-                while (prevNode != treeView.TopNode)
-                {
-                    fullPath = new StringBuilder(prevNode.Text + @"\" + fullPath);
-                    prevNode = prevNode.Parent;
-                }
-            } else
-            {
-                MessageBox.Show("Cannot create new folder here.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return fullPath.ToString();
+            return node.Tag.ToString() + @"\" + node.Name;
         }
         #endregion
 
@@ -358,6 +346,14 @@ namespace FileManager
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             treeView.SelectedNode = _lastSelectNode.Parent;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems[0].Name == "Real Folder")
+            {
+                initTopNode("Real Folder");
+            }
         }
     }
 }
