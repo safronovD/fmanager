@@ -210,7 +210,7 @@ namespace FileManager
                     Name = Path.GetFileName(directory),
                     Tag = fullPath
                 };
-               // newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(fullPath + @"\" + newTreeNode.Name).ToArray());
+                newTreeNode.Nodes.AddRange(new List<TreeNode>().ToArray());
                 newTreeNodeList.Add(newTreeNode);
             }
             return newTreeNodeList;
