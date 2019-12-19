@@ -75,11 +75,7 @@ namespace FileManager
 
         private void treeView_AfterCollapse(object sender, TreeViewEventArgs e)
         {
-            var node = e.Node;
-            node.Nodes.Clear();
-            List<TreeNode> emptyTreeNode = new List<TreeNode>(1);
-            emptyTreeNode.Add(new TreeNode("Node"));
-            node.Nodes.AddRange(emptyTreeNode.ToArray());
+
         }
 
         private void toolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,8 +115,11 @@ namespace FileManager
                     else if (listView.SelectedItems[0].Group == listView.Groups["Folders"])
                     {
                         TreeNode[] treeNode = _lastSelectNode.Nodes.Find(listView.SelectedItems[0].Name, false);
-                        treeNode[0].Expand();
-                        treeView.SelectedNode = treeNode[0];
+                        if (treeNode.Count() == 1)
+                        {
+                            treeNode[0].Expand();
+                            treeView.SelectedNode = treeNode[0];
+                        }
                     }
                 }
             }
