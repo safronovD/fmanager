@@ -42,6 +42,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <PackageReference Include="System.Resources.Extensions" Version="4.7.0" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
