@@ -84,7 +84,7 @@ namespace FileManager
             View view = (View)Enum.Parse(typeof(View), viewName);
             if(view != View.Details)
                 listView.View = view;
-        }55
+        }
 
         private void groupsToolStripButton_Click(object sender, EventArgs e)
         {
