@@ -52,7 +52,7 @@ namespace FileManager
         private void initTopNode(string path)
         {
             treeView.Nodes.Clear();
-            TreeNode topNode = new TreeNode("1", 0, 0, GetTreeNodeDirectories(@"F:\music\1").ToArray());
+            TreeNode topNode = new TreeNode("1", 0, 0, GetTreeNodeDirectories(@"C:\sprites").ToArray());
             topNode.ImageIndex = 0;
             topNode.Name = "Computer";
             topNode.SelectedImageIndex = 0;
@@ -84,7 +84,7 @@ namespace FileManager
             View view = (View)Enum.Parse(typeof(View), viewName);
             if(view != View.Details)
                 listView.View = view;
-        }
+        }55
 
         private void groupsToolStripButton_Click(object sender, EventArgs e)
         {
@@ -296,20 +296,24 @@ namespace FileManager
 
         private void createFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = GetFullPathForSelectedNode(_lastSelectNode) + "\\NewFolder";
+            string path = GetFullPathForSelectedNode(_lastSelectNode);
 
             try
             {
-                if (Directory.Exists(path))
+                var i = 0;
+                while (true)
                 {
-                    MessageBox.Show("New Folder exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    string folderPath = path + @"/" + "NewFolder" + i.ToString();
+                    if (!Directory.Exists(folderPath))
+                    {
+                        DirectoryInfo di = Directory.CreateDirectory(folderPath);
+                        _lastSelectNode.Collapse();
+                        _lastSelectNode.Expand();
+                        SetListView(_lastSelectNode);
+                        break;
+                    }
+                    i++;
                 }
-                
-                DirectoryInfo di = Directory.CreateDirectory(path);
-                _lastSelectNode.Collapse();
-                _lastSelectNode.Expand();
-                SetListView(_lastSelectNode);
             }
             catch (Exception exp)
             {
@@ -354,5 +358,6 @@ namespace FileManager
                 initTopNode("Real Folder");
             }
         }
+        
     }
 }
