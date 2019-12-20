@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user name="safronov.d">
+    <login>safronov.d</login>
+    <password>$2a$11$UtVftItdTw5RQAxNrClGn.5OPfukQ5JIN4F39kovEZmT2uckPe/Cq</password>
+  </user>
+  <user name="">
+    <login>admin</login>
+    <password>$2a$11$.Vy686qpZ52lxzmSxwDLQe8IhYK1wh75bOc8XoKVMqLHOIX/Rm9s6</password>
+  </user>
+</users>
