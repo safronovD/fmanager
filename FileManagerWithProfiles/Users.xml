@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <users>
-  <user name="safronov.d">
-    <login>safronov.d</login>
-    <password>$2a$11$UtVftItdTw5RQAxNrClGn.5OPfukQ5JIN4F39kovEZmT2uckPe/Cq</password>
-  </user>
   <user name="">
     <login>admin</login>
-    <password>$2a$11$.Vy686qpZ52lxzmSxwDLQe8IhYK1wh75bOc8XoKVMqLHOIX/Rm9s6</password>
+    <password>$2a$11$K55tf.uGAdhPY8At18wtGuffS.8r70NU0/us2zfSELFdf2MlLd./m</password>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
   </user>
 </users>

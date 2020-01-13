@@ -21,30 +21,6 @@ namespace FileManagerWithProfiles
 
             _xDoc = new XmlDocument();
             _xDoc.Load(Properties.Settings.Default.xmlPath);
-
-            //XmlElement xRoot = xDoc.DocumentElement;
-            //// обход всех узлов в корневом элементе
-            //foreach (XmlNode xnode in xRoot)
-            //{
-            //    // получаем атрибут name
-            //    if (xnode.Attributes.Count > 0)
-            //    {
-            //        XmlNode attr = xnode.Attributes.GetNamedItem("name");
-            //        if (attr != null)
-            //            Console.WriteLine(attr.Value);
-            //    }
-            //    // обходим все дочерние узлы элемента user
-            //    foreach (XmlNode childnode in xnode.ChildNodes)
-            //    {
-            //        // если узел - company
-            //        if (childnode.Name == "password")
-            //        {
-            //            Console.WriteLine($"Компания: {childnode.InnerText}");
-            //        }
-
-            //    }
-            //    Console.WriteLine();
-            //}
         }
 
         private void buttonIn_Click(object sender, EventArgs e)
@@ -59,6 +35,9 @@ namespace FileManagerWithProfiles
                     {
                         Properties.Settings.Default.userName = textBox1.Text;
                         Properties.Settings.Default.Save();
+                        
+                        this.Close();
+
                         return;
                     } else
                     {
@@ -85,16 +64,31 @@ namespace FileManagerWithProfiles
             }
 
             XmlElement userElem = _xDoc.CreateElement("user");
+            XmlAttribute nameAttr = _xDoc.CreateAttribute("name");
             XmlElement loginElem = _xDoc.CreateElement("login");
             XmlElement passwordElem = _xDoc.CreateElement("password");
+            XmlElement rootElem = _xDoc.CreateElement("root");
+            XmlElement fontElem = _xDoc.CreateElement("fontColor");
+            XmlElement backElem = _xDoc.CreateElement("backColor");
 
             XmlText loginText = _xDoc.CreateTextNode(textBox1.Text);
             XmlText passwordText = _xDoc.CreateTextNode(BCrypt.Net.BCrypt.HashPassword(textBox2.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt()));
-            
+            XmlText rootText = _xDoc.CreateTextNode(@"C:\temp");
+            XmlText fontText = _xDoc.CreateTextNode("0");
+            XmlText backText = _xDoc.CreateTextNode("0");
+
+            nameAttr.AppendChild(loginText);
             loginElem.AppendChild(loginText);
             passwordElem.AppendChild(passwordText);
+            rootElem.AppendChild(rootText);
+            fontElem.AppendChild(fontText);
+            backElem.AppendChild(backText);
+            //userElem.SetAttribute(Name, textBox1.Text);
             userElem.AppendChild(loginElem);
             userElem.AppendChild(passwordElem);
+            userElem.AppendChild(rootElem);
+            userElem.AppendChild(fontElem);
+            userElem.AppendChild(backElem);
             xRoot.AppendChild(userElem);
 
             _xDoc.Save(Properties.Settings.Default.xmlPath);
