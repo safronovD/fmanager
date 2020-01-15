@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace FileManager
+namespace FileManagerWithProfiles
 {
     enum TypeItem
     {
@@ -19,20 +19,21 @@ namespace FileManager
         file
     }
 
-    public partial class Form : System.Windows.Forms.Form
+    public partial class MainForm : System.Windows.Forms.Form
     {
         private TreeNode _lastSelectNode;
 
-        public Form()
+        public MainForm()
         {
             InitializeComponent();
+
             foreach (string view in Enum.GetNames(typeof(View)))
+            {
                 toolStripComboBox.Items.Add(view);
+            }
 
             toolStripComboBox.SelectedIndex = 0;
-
-
-
+            
             List<ListViewItem> newListViewItemList = new List<ListViewItem>(2);
 
             ListViewItem listViewItem = new ListViewItem();
@@ -47,16 +48,21 @@ namespace FileManager
 
             listView1.Items.Clear();
             listView1.Items.AddRange(newListViewItemList.ToArray());
+
+            listView1.View = View.List;
        }
 
-        private void initTopNode(string path)
+        private void initTopNodeWithPath(string path)
         {
             treeView.Nodes.Clear();
-            TreeNode topNode = new TreeNode("1", 0, 0, GetTreeNodeDirectories(@"C:\sprites").ToArray());
-            topNode.ImageIndex = 0;
-            topNode.Name = "Computer";
-            topNode.SelectedImageIndex = 0;
-            topNode.Text = "My computer";
+            TreeNode topNode = new TreeNode("1", 0, 0, GetTreeNodeDirectories(path).ToArray())
+            {
+                ImageIndex = 2,
+                SelectedImageIndex = 2,
+                Name = "Root",
+                Text = path,
+                Tag = path
+            };
             treeView.Nodes.AddRange(new TreeNode[] { topNode });
             treeView.TopNode = topNode;
             _lastSelectNode = treeView.TopNode;
@@ -132,19 +138,11 @@ namespace FileManager
 
 
         #region ListView
-        private void SetListView(TreeNode _node)
+        private void SetListView(TreeNode node)
         {
             listView.Items.Clear();
-            var node = _node;
-            if (treeView.TopNode == node)
-            {
-                listView.Items.AddRange(GetListViewDrives().ToArray());
-            }
-            else
-            {
-                listView.Items.AddRange(GetListViewDirectories(node).ToArray());
-                listView.Items.AddRange(GetListViewFiles(node).ToArray());
-            }
+            listView.Items.AddRange(GetListViewDirectories(node).ToArray());
+            listView.Items.AddRange(GetListViewFiles(node).ToArray());
         }
 
         private List<ListViewItem> GetListViewFiles(TreeNode node)
@@ -208,9 +206,9 @@ namespace FileManager
                 TreeNode newTreeNode = new TreeNode(Path.GetFileName(directory), 2, 2)
                 {
                     Name = Path.GetFileName(directory),
-                    Tag = fullPath
+                    Tag = directory
                 };
-                newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(fullPath + @"\" + newTreeNode.Name).ToArray());
+                newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(directory).ToArray());
                 newTreeNodeList.Add(newTreeNode);
             }
             return newTreeNodeList;
@@ -231,7 +229,7 @@ namespace FileManager
 
         private String GetFullPathForSelectedNode(TreeNode node)
         {
-            return node.Tag.ToString() + @"\" + node.Name;
+            return node.Tag.ToString();
         }
         #endregion
 
@@ -355,9 +353,14 @@ namespace FileManager
         {
             if (listView1.SelectedItems[0].Name == "Real Folder")
             {
-                initTopNode("Real Folder");
+                initTopNodeWithPath(@"F:\music");
             }
         }
-        
+
+        private void toolStripButtonSettings_Click(object sender, EventArgs e)
+        {
+            SettingForm settingForm = new SettingForm();
+            settingForm.ShowDialog();
+        }
     }
 }
