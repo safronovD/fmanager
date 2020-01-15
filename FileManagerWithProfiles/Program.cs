@@ -19,13 +19,13 @@ namespace FileManagerWithProfiles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
-            Application.Run(new AutentificationForm());
+            Application.Run(new MainForm());
+            //Application.Run(new AutentificationForm());
 
-            if (Properties.Settings.Default.userName != null)
-            {
-                Application.Run(new MainForm());
-            }
+            //if (Properties.Settings.Default.userName != null)
+            //{
+            //    Application.Run(new MainForm());
+            //}
         }
     }
 }

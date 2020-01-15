@@ -73,6 +73,26 @@ namespace FileManagerWithProfiles.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CopyProfile {
+            get {
+                object obj = ResourceManager.GetObject("CopyProfile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteProfile {
+            get {
+                object obj = ResourceManager.GetObject("DeleteProfile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap File {
             get {
                 object obj = ResourceManager.GetObject("File", resourceCulture);
@@ -96,6 +116,16 @@ namespace FileManagerWithProfiles.Properties {
         internal static System.Drawing.Bitmap HardDrive {
             get {
                 object obj = ResourceManager.GetObject("HardDrive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NewProfile {
+            get {
+                object obj = ResourceManager.GetObject("NewProfile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

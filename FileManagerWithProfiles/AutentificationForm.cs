@@ -33,7 +33,7 @@ namespace FileManagerWithProfiles
                 {
                     if (BCrypt.Net.BCrypt.Verify(textBox2.Text + "YYYYY", node["password"].InnerText))
                     {
-                        Properties.Settings.Default.userName = textBox1.Text;
+                        //Properties.Settings.Default.userName = textBox1.Text;
                         Properties.Settings.Default.Save();
                         
                         this.Close();

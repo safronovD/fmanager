@@ -4,7 +4,8 @@
     <login>admin</login>
     <password>$2a$11$K55tf.uGAdhPY8At18wtGuffS.8r70NU0/us2zfSELFdf2MlLd./m</password>
     <root>C:\temp</root>
-    <fontColor>Black</fontColor>
+    <fontColor>Khaki</fontColor>
     <backColor>White</backColor>
+    <user>NewProfile2</user>
   </user>
 </users>

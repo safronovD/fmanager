@@ -22,21 +22,7 @@ namespace FileManagerWithProfiles
 
             try
             {
-                _xDoc = new XmlDocument();
-                _xDoc.Load(Properties.Settings.Default.xmlPath);
-
-                XmlElement xRoot = _xDoc.DocumentElement;
-
-                List<XmlNode> list = xRoot.ChildNodes.Cast<XmlNode>()
-                               .Where(user => user["login"].InnerText.Equals(Properties.Settings.Default.userName))
-                               .ToList();
-
-                if (list.Count != 1)
-                {
-                    throw new ArgumentException("Users.xml is corrupted!", "XmlDocument");
-                }
-
-                _userNode = list[0];
+                Util.initXMLComponents(ref _xDoc, ref _userNode);
 
                 addColors(comboBoxFontColors);
                 addColors(comboBoxBackColor);

@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Soap;
+using System.Xml;
 
 namespace FileManagerWithProfiles
 {
@@ -22,10 +25,14 @@ namespace FileManagerWithProfiles
     public partial class MainForm : System.Windows.Forms.Form
     {
         private TreeNode _lastSelectNode;
+        private XmlNode _userNode;
+        private XmlDocument _xDoc;
 
         public MainForm()
         {
             InitializeComponent();
+
+            Util.initXMLComponents(ref _xDoc, ref _userNode);
 
             foreach (string view in Enum.GetNames(typeof(View)))
             {
@@ -33,21 +40,8 @@ namespace FileManagerWithProfiles
             }
 
             toolStripComboBox.SelectedIndex = 0;
-            
-            List<ListViewItem> newListViewItemList = new List<ListViewItem>(2);
 
-            ListViewItem listViewItem = new ListViewItem();
-            listViewItem.Name = "My Computer";
-            listViewItem.Text = "My Computer";
-            newListViewItemList.Add(listViewItem);
-
-            listViewItem = new ListViewItem();
-            listViewItem.Name = "Real Folder";
-            listViewItem.Text = "Real Folder";
-            newListViewItemList.Add(listViewItem);
-
-            listView1.Items.Clear();
-            listView1.Items.AddRange(newListViewItemList.ToArray());
+            initTopNodeWithPath(@"F:\music");
 
             listView1.View = View.List;
        }
@@ -361,6 +355,81 @@ namespace FileManagerWithProfiles
         {
             SettingForm settingForm = new SettingForm();
             settingForm.ShowDialog();
+        }
+
+        private void saveTreeNode (TreeNode treeNode, string path)
+        {
+            FileStream fs = new FileStream(path, FileMode.Create);
+            SoapFormatter sf = new SoapFormatter();
+            sf.Serialize(fs, treeNode);
+            fs.Close();
+        }
+
+        private TreeNode loadTreeNode(string path)
+        {
+            FileStream fs = new FileStream(path, FileMode.Open);
+            SoapFormatter sf = new SoapFormatter();
+            TreeNode treeNode = (TreeNode)sf.Deserialize(fs);
+            fs.Close();
+
+            return treeNode;
+        }
+
+        private void toolStripButtonNew_Click(object sender, EventArgs e)
+        {
+            string path = Properties.Settings.Default.profilesPath;
+
+            try
+            {
+                int i = 0;
+                while (true)
+                {
+                    string filePath = path + @"/" + "NewProfile" + i.ToString() + ".xml";
+                    if (!File.Exists(filePath))
+                    {
+                        saveTreeNode(treeView.TopNode, filePath);
+
+                        XmlElement profileElem = _xDoc.CreateElement("user");
+                        XmlText profileText = _xDoc.CreateTextNode("NewProfile" + i.ToString());
+                        profileElem.AppendChild(profileText);
+                        _userNode.AppendChild(profileElem);
+                        _xDoc.Save(Properties.Settings.Default.xmlPath);
+
+                        break;
+                    }
+                    i++;
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+        private void addProfiles(ListView listView)
+        {
+            List<ListViewItem> newListViewItemList = new List<ListViewItem>(2);
+
+            ListViewItem listViewItem = new ListViewItem();
+            listViewItem.Name = "My Computer";
+            listViewItem.Text = "My Computer";
+            newListViewItemList.Add(listViewItem);
+
+            listViewItem = new ListViewItem();
+            listViewItem.Name = "Real Folder";
+            listViewItem.Text = "Real Folder";
+            newListViewItemList.Add(listViewItem);
+
+            listView1.Items.Clear();
+            listView1.Items.AddRange(newListViewItemList.ToArray());
+
+            listViewItem = new ListViewItem()
+            {
+                Name = "Real Folder",
+                Text = "Real Folder"
+            };
+            listView.Items.Add(listViewItem);
         }
     }
 }

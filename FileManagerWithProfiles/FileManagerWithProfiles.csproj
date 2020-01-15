@@ -52,10 +52,14 @@
       <Version>3.2.1</Version>
     </PackageReference>
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="SoapFormatter">
+      <Version>1.0.11</Version>
+    </PackageReference>
     <PackageReference Include="System.Resources.Extensions" Version="4.7.0" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Util.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +125,11 @@
     <None Include="images\HardDrive.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\CopyProfile.bmp" />
+    <Content Include="images\CopyProfile.png" />
+    <Content Include="images\DeleteProfile.png" />
+    <Content Include="images\NewProfile.png" />
     <Content Include="Users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
