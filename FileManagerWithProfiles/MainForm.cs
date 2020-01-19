@@ -33,6 +33,7 @@ namespace FileManagerWithProfiles
             InitializeComponent();
 
             Util.initXMLComponents(ref _xDoc, ref _userNode);
+            changeColors(_userNode["fontColor"].InnerText, _userNode["backColor"].InnerText);
 
             foreach (string view in Enum.GetNames(typeof(View)))
             {
@@ -43,8 +44,11 @@ namespace FileManagerWithProfiles
 
             initTopNodeWithPath(@"F:\music");
 
-            listView1.View = View.List;
-       }
+            listView1.View = View.Tile;
+
+            addProfiles(listView1);
+            listView1.ShowGroups = true;
+        }
 
         private void initTopNodeWithPath(string path)
         {
@@ -67,10 +71,10 @@ namespace FileManagerWithProfiles
         {
             return null;
         }
-        
+
         private void treeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
         {
-            
+
         }
 
         private void treeView_AfterCollapse(object sender, TreeViewEventArgs e)
@@ -82,7 +86,7 @@ namespace FileManagerWithProfiles
         {
             string viewName = toolStripComboBox.SelectedItem.ToString();
             View view = (View)Enum.Parse(typeof(View), viewName);
-            if(view != View.Details)
+            if (view != View.Details)
                 listView.View = view;
         }
 
@@ -193,7 +197,7 @@ namespace FileManagerWithProfiles
         #region TreeView
 
         private List<TreeNode> GetTreeNodeDirectories(string fullPath)
-        {   
+        {
             List<TreeNode> newTreeNodeList = new List<TreeNode>(GetDirectories(fullPath).Count);
             foreach (var directory in GetDirectories(fullPath))
             {
@@ -203,6 +207,31 @@ namespace FileManagerWithProfiles
                     Tag = directory
                 };
                 newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(directory).ToArray());
+                newTreeNodeList.Add(newTreeNode);
+            }
+            return newTreeNodeList;
+        }
+
+        private List<TreeNode> GetTreeNodeDirectoriesAndFiles(string fullPath)
+        {
+            List<TreeNode> newTreeNodeList = new List<TreeNode>(GetDirectories(fullPath).Count);
+            foreach (var directory in GetDirectories(fullPath))
+            {
+                TreeNode newTreeNode = new TreeNode(Path.GetFileName(directory), 2, 2)
+                {
+                    Name = Path.GetFileName(directory),
+                    Tag = directory
+                };
+                newTreeNode.Nodes.AddRange(GetTreeNodeDirectoriesAndFiles(directory).ToArray());
+                newTreeNodeList.Add(newTreeNode);
+            }
+            foreach (var file in GetFiles(fullPath))
+            {
+                TreeNode newTreeNode = new TreeNode(Path.GetFileName(file), 1, 1)
+                {
+                    Name = Path.GetFileName(file),
+                    Tag = file
+                };
                 newTreeNodeList.Add(newTreeNode);
             }
             return newTreeNodeList;
@@ -345,19 +374,18 @@ namespace FileManagerWithProfiles
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems[0].Name == "Real Folder")
-            {
-                initTopNodeWithPath(@"F:\music");
-            }
+
         }
 
         private void toolStripButtonSettings_Click(object sender, EventArgs e)
         {
             SettingForm settingForm = new SettingForm();
             settingForm.ShowDialog();
+            Util.initXMLComponents(ref _xDoc, ref _userNode);
+            changeColors(_userNode["fontColor"].InnerText, _userNode["backColor"].InnerText);
         }
 
-        private void saveTreeNode (TreeNode treeNode, string path)
+        private void saveTreeNode(TreeNode treeNode, string path)
         {
             FileStream fs = new FileStream(path, FileMode.Create);
             SoapFormatter sf = new SoapFormatter();
@@ -384,14 +412,21 @@ namespace FileManagerWithProfiles
                 int i = 0;
                 while (true)
                 {
-                    string filePath = path + @"/" + "NewProfile" + i.ToString() + ".xml";
+                    string filePath = path + @"/" + i.ToString() + ".xml";
                     if (!File.Exists(filePath))
                     {
                         saveTreeNode(treeView.TopNode, filePath);
 
-                        XmlElement profileElem = _xDoc.CreateElement("user");
-                        XmlText profileText = _xDoc.CreateTextNode("NewProfile" + i.ToString());
-                        profileElem.AppendChild(profileText);
+                        XmlElement profileElem = _xDoc.CreateElement("profile");
+                        XmlElement profileName = _xDoc.CreateElement("name");
+                        profileName.AppendChild(_xDoc.CreateTextNode("NewProfile" + i.ToString()));
+                        XmlElement profileID = _xDoc.CreateElement("id");
+                        profileID.AppendChild(_xDoc.CreateTextNode(i.ToString()));
+                        XmlElement profileFolder = _xDoc.CreateElement("folder");
+                        profileFolder.AppendChild(_xDoc.CreateTextNode(_userNode["root"].InnerText));
+                        profileElem.AppendChild(profileName);
+                        profileElem.AppendChild(profileID);
+                        profileElem.AppendChild(profileFolder);
                         _userNode.AppendChild(profileElem);
                         _xDoc.Save(Properties.Settings.Default.xmlPath);
 
@@ -412,24 +447,45 @@ namespace FileManagerWithProfiles
             List<ListViewItem> newListViewItemList = new List<ListViewItem>(2);
 
             ListViewItem listViewItem = new ListViewItem();
-            listViewItem.Name = "My Computer";
-            listViewItem.Text = "My Computer";
+            listViewItem.Name = "Computer";
+            listViewItem.Text = "Computer";
+            listViewItem.Group = listView1.Groups["Real"];
             newListViewItemList.Add(listViewItem);
 
             listViewItem = new ListViewItem();
-            listViewItem.Name = "Real Folder";
-            listViewItem.Text = "Real Folder";
+            listViewItem.Name = "Folder";
+            listViewItem.Text = "Folder";
+            listViewItem.Group = listView1.Groups["Real"];
             newListViewItemList.Add(listViewItem);
+
+            foreach (XmlNode node in _userNode.ChildNodes)
+            {
+                if (node.Name == "profile")
+                {
+                    listViewItem = new ListViewItem();
+                    listViewItem.Name = node["id"].InnerText;
+                    listViewItem.Text = node["name"].InnerText;
+                    listViewItem.Group = listView1.Groups["Virtual"];
+                    newListViewItemList.Add(listViewItem);
+                }
+            }
 
             listView1.Items.Clear();
             listView1.Items.AddRange(newListViewItemList.ToArray());
+        }
 
-            listViewItem = new ListViewItem()
-            {
-                Name = "Real Folder",
-                Text = "Real Folder"
-            };
-            listView.Items.Add(listViewItem);
+        private void changeColors(String fontColor, String backColor)
+        {
+            this.BackColor = Color.FromName(backColor);
+            this.ForeColor = Color.FromName(fontColor);
+
+            this.listView.BackColor = Color.FromName(backColor); 
+            this.listView1.BackColor = Color.FromName(backColor); 
+            this.treeView.BackColor = Color.FromName(backColor);
+
+            this.listView.ForeColor = Color.FromName(fontColor);
+            this.listView1.ForeColor = Color.FromName(fontColor);
+            this.treeView.ForeColor = Color.FromName(fontColor);
         }
     }
 }

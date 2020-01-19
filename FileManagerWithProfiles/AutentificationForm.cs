@@ -74,8 +74,8 @@ namespace FileManagerWithProfiles
             XmlText loginText = _xDoc.CreateTextNode(textBox1.Text);
             XmlText passwordText = _xDoc.CreateTextNode(BCrypt.Net.BCrypt.HashPassword(textBox2.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt()));
             XmlText rootText = _xDoc.CreateTextNode(@"C:\temp");
-            XmlText fontText = _xDoc.CreateTextNode("0");
-            XmlText backText = _xDoc.CreateTextNode("0");
+            XmlText fontText = _xDoc.CreateTextNode("Black");
+            XmlText backText = _xDoc.CreateTextNode("White");
 
             nameAttr.AppendChild(loginText);
             loginElem.AppendChild(loginText);

@@ -125,8 +125,6 @@
     <None Include="images\HardDrive.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icon1.ico" />
-    <None Include="Resources\CopyProfile.bmp" />
     <Content Include="images\CopyProfile.png" />
     <Content Include="images\DeleteProfile.png" />
     <Content Include="images\NewProfile.png" />
