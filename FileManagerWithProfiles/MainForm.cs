@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Diagnostics;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Soap;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace FileManagerWithProfiles
@@ -25,8 +21,10 @@ namespace FileManagerWithProfiles
     public partial class MainForm : System.Windows.Forms.Form
     {
         private TreeNode _lastSelectNode;
+
         private XmlNode _userNode;
         private XmlDocument _xDoc;
+        private TreeNode _fullNode;
 
         public MainForm()
         {
@@ -41,9 +39,7 @@ namespace FileManagerWithProfiles
             }
 
             toolStripComboBox.SelectedIndex = 0;
-
-            initTopNodeWithPath(@"F:\music");
-
+            
             listView1.View = View.Tile;
 
             addProfiles(listView1);
@@ -53,33 +49,20 @@ namespace FileManagerWithProfiles
         private void initTopNodeWithPath(string path)
         {
             treeView.Nodes.Clear();
-            TreeNode topNode = new TreeNode("1", 0, 0, GetTreeNodeDirectories(path).ToArray())
-            {
-                ImageIndex = 2,
-                SelectedImageIndex = 2,
-                Name = "Root",
-                Text = path,
-                Tag = path
-            };
+            TreeNode topNode = Util.createNodeForView(path);
             treeView.Nodes.AddRange(new TreeNode[] { topNode });
             treeView.TopNode = topNode;
             _lastSelectNode = treeView.TopNode;
             _lastSelectNode.Expand();
         }
 
-        private TreeView getRealTreeView(string Path)
+        private void initTopNodeWithNode(TreeNode topNode)
         {
-            return null;
-        }
-
-        private void treeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
-        {
-
-        }
-
-        private void treeView_AfterCollapse(object sender, TreeViewEventArgs e)
-        {
-
+            treeView.Nodes.Clear();
+            treeView.Nodes.AddRange(new TreeNode[] { topNode });
+            treeView.TopNode = topNode;
+            _lastSelectNode = treeView.TopNode;
+            _lastSelectNode.Expand();
         }
 
         private void toolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,13 +76,13 @@ namespace FileManagerWithProfiles
         private void groupsToolStripButton_Click(object sender, EventArgs e)
         {
             listView.ShowGroups = !listView.ShowGroups;
-            SetListView(_lastSelectNode);
+            setListView(_lastSelectNode);
         }
 
         private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             _lastSelectNode = e.Node;
-            SetListView(_lastSelectNode);
+            setListView(_lastSelectNode);
         }
 
         private void listView_DoubleClick(object sender, EventArgs e)
@@ -108,7 +91,7 @@ namespace FileManagerWithProfiles
             {
                 if (listView.SelectedItems.Count == 1)
                 {
-                    string path = GetFullPathForSelectedNode(_lastSelectNode) + @"\" + listView.SelectedItems[0].Name;
+                    string path = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + listView.SelectedItems[0].Name;
                     if (listView.SelectedItems[0].Group == listView.Groups["Files"])
                     {
                         if (File.Exists(path))
@@ -136,16 +119,47 @@ namespace FileManagerWithProfiles
 
 
         #region ListView
-        private void SetListView(TreeNode node)
+        private void setListView(TreeNode node)
         {
             listView.Items.Clear();
-            listView.Items.AddRange(GetListViewDirectories(node).ToArray());
-            listView.Items.AddRange(GetListViewFiles(node).ToArray());
+            //listView.Items.AddRange(GetListViewDirectories(node).ToArray());
+            //listView.Items.AddRange(GetListViewFiles(node).ToArray());
+            listView.Items.AddRange(getVirtualListView(Util.findInTreeNode(_fullNode, node.FullPath)).ToArray());
+        }
+
+        private List<ListViewItem> getVirtualListView(TreeNode node)
+        {
+            List<ListViewItem> newListViewItemList = new List<ListViewItem>(node.Nodes.Count);
+
+            foreach(TreeNode childNode in node.Nodes)
+            {
+                var listViewItem = new ListViewItem();
+                listViewItem.Name = Path.GetFileName(childNode.Name);
+                listViewItem.Text = Path.GetFileName(childNode.Text);
+
+                switch (childNode.ToolTipText) {
+                    case "File":
+                    {
+                        listViewItem.ImageIndex = 1;
+                        listViewItem.Group = listView.Groups["Files"];
+                        break;
+                    }
+                    case "Folder":
+                    {
+                        listViewItem.ImageIndex = 2;
+                        listViewItem.Group = listView.Groups["Folders"];
+                        break;
+                    }
+                }
+
+                newListViewItemList.Add(listViewItem);
+            }
+            return newListViewItemList;
         }
 
         private List<ListViewItem> GetListViewFiles(TreeNode node)
         {
-            var files = GetFiles(GetFullPathForSelectedNode(node));
+            var files = Util.GetFiles(Util.GetFullPathForSelectedNode(node));
 
             List<ListViewItem> newListViewItemList = new List<ListViewItem>(files.Count);
             foreach (var file in files)
@@ -162,7 +176,7 @@ namespace FileManagerWithProfiles
 
         private List<ListViewItem> GetListViewDirectories(TreeNode node)
         {
-            var directories = GetDirectories(GetFullPathForSelectedNode(node));
+            var directories = Util.GetDirectories(Util.GetFullPathForSelectedNode(node));
 
             List<ListViewItem> newListViewItemList = new List<ListViewItem>(directories.Count);
             foreach (var directory in directories)
@@ -179,8 +193,8 @@ namespace FileManagerWithProfiles
 
         private List<ListViewItem> GetListViewDrives()
         {
-            List<ListViewItem> newListViewItemList = new List<ListViewItem>(GetLogicalDrives().Count);
-            foreach (var drive in GetLogicalDrives())
+            List<ListViewItem> newListViewItemList = new List<ListViewItem>(Util.GetLogicalDrives().Count);
+            foreach (var drive in Util.GetLogicalDrives())
             {
                 var listViewItem = new ListViewItem();
                 listViewItem.Name = drive;
@@ -191,110 +205,6 @@ namespace FileManagerWithProfiles
             }
             return newListViewItemList;
         }
-        #endregion
-
-
-        #region TreeView
-
-        private List<TreeNode> GetTreeNodeDirectories(string fullPath)
-        {
-            List<TreeNode> newTreeNodeList = new List<TreeNode>(GetDirectories(fullPath).Count);
-            foreach (var directory in GetDirectories(fullPath))
-            {
-                TreeNode newTreeNode = new TreeNode(Path.GetFileName(directory), 2, 2)
-                {
-                    Name = Path.GetFileName(directory),
-                    Tag = directory
-                };
-                newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(directory).ToArray());
-                newTreeNodeList.Add(newTreeNode);
-            }
-            return newTreeNodeList;
-        }
-
-        private List<TreeNode> GetTreeNodeDirectoriesAndFiles(string fullPath)
-        {
-            List<TreeNode> newTreeNodeList = new List<TreeNode>(GetDirectories(fullPath).Count);
-            foreach (var directory in GetDirectories(fullPath))
-            {
-                TreeNode newTreeNode = new TreeNode(Path.GetFileName(directory), 2, 2)
-                {
-                    Name = Path.GetFileName(directory),
-                    Tag = directory
-                };
-                newTreeNode.Nodes.AddRange(GetTreeNodeDirectoriesAndFiles(directory).ToArray());
-                newTreeNodeList.Add(newTreeNode);
-            }
-            foreach (var file in GetFiles(fullPath))
-            {
-                TreeNode newTreeNode = new TreeNode(Path.GetFileName(file), 1, 1)
-                {
-                    Name = Path.GetFileName(file),
-                    Tag = file
-                };
-                newTreeNodeList.Add(newTreeNode);
-            }
-            return newTreeNodeList;
-        }
-
-        private List<TreeNode> GetTreeNodeDrives()
-        {
-            List<TreeNode> newTreeNodeList = new List<TreeNode>(GetLogicalDrives().Count);
-            foreach (var drive in GetLogicalDrives())
-            {
-                TreeNode newTreeNode = new TreeNode(drive, 3, 3);
-                newTreeNode.Nodes.AddRange(GetTreeNodeDirectories(newTreeNode.Text).ToArray());
-                newTreeNode.Name = drive;
-                newTreeNodeList.Add(newTreeNode);
-            }
-            return newTreeNodeList;
-        }
-
-        private String GetFullPathForSelectedNode(TreeNode node)
-        {
-            return node.Tag.ToString();
-        }
-        #endregion
-
-
-        #region AdditionalFuntionsForListViewAndTreeView
-        private List<String> GetLogicalDrives()
-        {
-            List<String> drivesList = new List<string>();
-            drivesList.AddRange(System.IO.Directory.GetLogicalDrives());
-            return drivesList;
-        }
-
-        private List<String> GetDirectories(String fullPath)
-        {
-            List<String> directories = new List<string>();
-            try
-            {
-                directories.AddRange(Directory.GetDirectories(fullPath.ToString()));
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return directories;
-        }
-
-        private List<String> GetFiles(String fullPath)
-        {
-            List<String> files = new List<string>();
-            try
-            {
-                files.AddRange(Directory.GetFiles(fullPath));
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally { }
-            files.Sort((x, y) => String.Compare(x, y, StringComparison.Ordinal));
-            return files;
-        }
-
         #endregion
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -309,7 +219,7 @@ namespace FileManagerWithProfiles
             {
                 if (node.Text == selectedItems[0].Text)
                 {
-                    string s = GetFullPathForSelectedNode(node);
+                    string s = Util.GetFullPathForSelectedNode(node);
                 }
             }
 
@@ -317,7 +227,7 @@ namespace FileManagerWithProfiles
 
         private void createFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = GetFullPathForSelectedNode(_lastSelectNode);
+            string path = Util.GetFullPathForSelectedNode(_lastSelectNode);
 
             try
             {
@@ -330,7 +240,7 @@ namespace FileManagerWithProfiles
                         DirectoryInfo di = Directory.CreateDirectory(folderPath);
                         _lastSelectNode.Collapse();
                         _lastSelectNode.Expand();
-                        SetListView(_lastSelectNode);
+                        setListView(_lastSelectNode);
                         break;
                     }
                     i++;
@@ -350,14 +260,14 @@ namespace FileManagerWithProfiles
                 var selectedItems = listView.SelectedItems;
                 foreach (ListViewItem selectedItem in listView.SelectedItems)
                 {
-                    string path = GetFullPathForSelectedNode(_lastSelectNode) + "\\" + selectedItem.Text;
+                    string path = Util.GetFullPathForSelectedNode(_lastSelectNode) + "\\" + selectedItem.Text;
                     if (Directory.Exists(path))
                     {
                         Directory.Delete(path);
                     }
                     _lastSelectNode.Collapse();
                     _lastSelectNode.Expand();
-                    SetListView(_lastSelectNode);
+                    setListView(_lastSelectNode);
                 }
             }
             catch (Exception exp)
@@ -374,7 +284,30 @@ namespace FileManagerWithProfiles
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                if (listView1.SelectedItems.Count == 1)
+                {
+                    var selectedItem = listView1.SelectedItems[0];
 
+                    if (selectedItem.Group == listView1.Groups["Virtual"])
+                    {
+                        _fullNode = loadTreeNode(Properties.Settings.Default.profilesPath + @"/" + selectedItem.Name + ".xml");
+                        listView.ContextMenuStrip = contextMenuStrip2;
+                        initTopNodeWithNode(Util.getFilteredNode(_fullNode));
+                    } else
+                    {
+                        _fullNode = Util.createNodeForSave(_userNode["root"].InnerText);
+                        listView.ContextMenuStrip = contextMenuStrip1;
+                        initTopNodeWithNode(_fullNode);
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
         }
 
         private void toolStripButtonSettings_Click(object sender, EventArgs e)
@@ -415,7 +348,7 @@ namespace FileManagerWithProfiles
                     string filePath = path + @"/" + i.ToString() + ".xml";
                     if (!File.Exists(filePath))
                     {
-                        saveTreeNode(treeView.TopNode, filePath);
+                        saveTreeNode(Util.createNodeForSave(_userNode["root"].InnerText), filePath);
 
                         XmlElement profileElem = _xDoc.CreateElement("profile");
                         XmlElement profileName = _xDoc.CreateElement("name");
@@ -427,13 +360,15 @@ namespace FileManagerWithProfiles
                         profileElem.AppendChild(profileName);
                         profileElem.AppendChild(profileID);
                         profileElem.AppendChild(profileFolder);
-                        _userNode.AppendChild(profileElem);
+                        _userNode["profiles"].AppendChild(profileElem);
                         _xDoc.Save(Properties.Settings.Default.xmlPath);
 
                         break;
                     }
                     i++;
                 }
+
+                addProfiles(listView1);
             }
             catch (Exception exp)
             {
@@ -458,7 +393,7 @@ namespace FileManagerWithProfiles
             listViewItem.Group = listView1.Groups["Real"];
             newListViewItemList.Add(listViewItem);
 
-            foreach (XmlNode node in _userNode.ChildNodes)
+            foreach (XmlNode node in _userNode["profiles"].ChildNodes)
             {
                 if (node.Name == "profile")
                 {
@@ -479,13 +414,94 @@ namespace FileManagerWithProfiles
             this.BackColor = Color.FromName(backColor);
             this.ForeColor = Color.FromName(fontColor);
 
-            this.listView.BackColor = Color.FromName(backColor); 
-            this.listView1.BackColor = Color.FromName(backColor); 
+            this.listView.BackColor = Color.FromName(backColor);
+            this.listView1.BackColor = Color.FromName(backColor);
             this.treeView.BackColor = Color.FromName(backColor);
 
             this.listView.ForeColor = Color.FromName(fontColor);
             this.listView1.ForeColor = Color.FromName(fontColor);
             this.treeView.ForeColor = Color.FromName(fontColor);
+        }
+
+        private void toolStripButtonDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listView1.SelectedItems.Count == 1)
+                {
+                    var selectedItem = listView1.SelectedItems[0];
+                    string filePath = Properties.Settings.Default.profilesPath + @"/" + selectedItem.Name + ".xml";
+
+                    if (File.Exists(filePath))
+                    {
+                        File.Delete(filePath);
+                    }
+
+                    List<XmlNode> list = _userNode["profiles"].ChildNodes.Cast<XmlNode>()
+                    .Where(profile => profile["id"].InnerText.Equals(selectedItem.Name))
+                    .ToList();
+
+                    if (list.Count != 1)
+                    {
+                        throw new ArgumentException("Users.xml is corrupted!", "XmlDocument");
+                    }
+
+                    _userNode["profiles"].RemoveChild(list[0]);
+                    _xDoc.Save(Properties.Settings.Default.xmlPath);
+
+                    listView1.Items.Remove(selectedItem);
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listView.SelectedItems.Count == 1)
+                {
+                    TreeNode[] treeNodeList = _lastSelectNode.Nodes.Find(listView.SelectedItems[0].Name, false);
+                    if (treeNodeList.Count() == 1)
+                    {
+                        TreeNode treeNode = Util.findInTreeNode(_fullNode, treeNodeList[0].FullPath);
+                        TreeNode newNode = (TreeNode)treeNode.Clone();
+
+                        int i = 0;
+
+                        while (true)
+                        {
+                            string newName = treeNode.Name + "Copy" + i.ToString();
+                            if (_lastSelectNode.Nodes.Find(newName, false).ToList().Count == 0)
+                            {
+                                newNode.Name = newName;
+                                newNode.Text = newName;
+                                break;
+                            }
+                            i++;
+                        }
+
+                        Util.findInTreeNode(_fullNode, _lastSelectNode.FullPath).Nodes.Add(newNode);
+                        _lastSelectNode.Nodes.Add(Util.getFilteredNode(newNode));
+
+                        setListView(_lastSelectNode);
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
