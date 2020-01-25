@@ -3,7 +3,7 @@
   <user name="">
     <login>admin</login>
     <password>$2a$11$K55tf.uGAdhPY8At18wtGuffS.8r70NU0/us2zfSELFdf2MlLd./m</password>
-    <root>C:\temp</root>
+    <root>F:\temp</root>
     <fontColor>Black</fontColor>
     <backColor>White</backColor>
     <profiles>
@@ -11,6 +11,21 @@
         <name>NewProfile0</name>
         <id>0</id>
         <folder>C:\temp</folder>
+      </profile>
+      <profile>
+        <name>NewProfile1</name>
+        <id>1</id>
+        <folder>C:\temp</folder>
+      </profile>
+      <profile>
+        <name>NewProfile2</name>
+        <id>2</id>
+        <folder>C:\temp</folder>
+      </profile>
+      <profile>
+        <name>NewProfile3</name>
+        <id>3</id>
+        <folder>F:\temp</folder>
       </profile>
     </profiles>
   </user>

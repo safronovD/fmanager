@@ -9,7 +9,7 @@
       <ImageKey id="ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
-      <ChildCount>14</ChildCount>
+      <ChildCount>8</ChildCount>
       <children0 href="#ref-6" />
       <children1 href="#ref-7" />
       <children2 href="#ref-8" />
@@ -18,298 +18,298 @@
       <children5 href="#ref-11" />
       <children6 href="#ref-12" />
       <children7 href="#ref-13" />
-      <children8 href="#ref-14" />
-      <children9 href="#ref-15" />
-      <children10 href="#ref-16" />
-      <children11 href="#ref-17" />
-      <children12 href="#ref-18" />
-      <children13 href="#ref-19" />
       <UserData href="#ref-2" />
     </a1:TreeNode>
     <a1:TreeNode id="ref-6" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-20">NewFolder1</Text>
+      <Text id="ref-14">NewFolder1</Text>
       <ToolTipText href="#ref-3" />
-      <Name id="ref-21">NewFolder1</Name>
+      <Name id="ref-15">NewFolder1</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>2</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>2</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>1</ChildCount>
-      <children0 href="#ref-22" />
-      <UserData id="ref-23">C:\temp\NewFolder1</UserData>
+      <children0 href="#ref-16" />
+      <UserData id="ref-17">C:\temp\NewFolder1</UserData>
     </a1:TreeNode>
     <a1:TreeNode id="ref-7" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-24">01. Sailor.mp3</Text>
-      <ToolTipText id="ref-25">File</ToolTipText>
-      <Name id="ref-26">01. Sailor.mp3</Name>
+      <Text id="ref-18">04. Svinta.mp3</Text>
+      <ToolTipText id="ref-19">File</ToolTipText>
+      <Name id="ref-20">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-27">C:\temp\01. Sailor.mp3</UserData>
+      <UserData id="ref-21">C:\temp\04. Svinta.mp3</UserData>
     </a1:TreeNode>
     <a1:TreeNode id="ref-8" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-28">02. Salome.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-29">02. Salome.mp3</Name>
+      <Text id="ref-22">06. Sapnai.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-23">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-30">C:\temp\02. Salome.mp3</UserData>
+      <UserData id="ref-24">C:\temp\06. Sapnai.mp3</UserData>
     </a1:TreeNode>
     <a1:TreeNode id="ref-9" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-31">03. Spindulelis.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-32">03. Spindulelis.mp3</Name>
+      <Text id="ref-25">07. Day.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-26">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-33">C:\temp\03. Spindulelis.mp3</UserData>
+      <UserData id="ref-27">C:\temp\07. Day.mp3</UserData>
     </a1:TreeNode>
     <a1:TreeNode id="ref-10" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-34">04. Svinta.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-35">04. Svinta.mp3</Name>
+      <Text id="ref-28">08. Good Night.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-29">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-36">C:\temp\04. Svinta.mp3</UserData>
+      <UserData id="ref-30">C:\temp\08. Good Night.mp3</UserData>
     </a1:TreeNode>
     <a1:TreeNode id="ref-11" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-37">05. Utrom.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-38">05. Utrom.mp3</Name>
+      <Text id="ref-31">09. Share My Disease.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-32">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-39">C:\temp\05. Utrom.mp3</UserData>
+      <UserData id="ref-33">C:\temp\09. Share My Disease.mp3</UserData>
     </a1:TreeNode>
     <a1:TreeNode id="ref-12" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-40">06. Sapnai.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-41">06. Sapnai.mp3</Name>
+      <Text id="ref-34">NewFolder1Copy0</Text>
+      <ToolTipText href="#ref-3" />
+      <Name href="#ref-34" />
       <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
+      <ImageIndex>2</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageIndex>2</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData id="ref-42">C:\temp\06. Sapnai.mp3</UserData>
+      <ChildCount>2</ChildCount>
+      <children0 href="#ref-35" />
+      <children1 href="#ref-36" />
+      <UserData href="#ref-17" />
     </a1:TreeNode>
     <a1:TreeNode id="ref-13" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-43">07. Day.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-44">07. Day.mp3</Name>
+      <Text id="ref-37">NewFolder1Copy1</Text>
+      <ToolTipText href="#ref-3" />
+      <Name href="#ref-37" />
       <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
+      <ImageIndex>2</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageIndex>2</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData id="ref-45">C:\temp\07. Day.mp3</UserData>
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-14" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-46">08. Good Night.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-47">08. Good Night.mp3</Name>
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData id="ref-48">C:\temp\08. Good Night.mp3</UserData>
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-15" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-49">09. Share My Disease.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-50">09. Share My Disease.mp3</Name>
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData id="ref-51">C:\temp\09. Share My Disease.mp3</UserData>
+      <ChildCount>1</ChildCount>
+      <children0 href="#ref-38" />
+      <UserData href="#ref-17" />
     </a1:TreeNode>
     <a1:TreeNode id="ref-16" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-52">10. Drift.mp3</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-53">10. Drift.mp3</Name>
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData id="ref-54">C:\temp\10. Drift.mp3</UserData>
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-17" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-55">cover.jpg</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-56">cover.jpg</Name>
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData id="ref-57">C:\temp\cover.jpg</UserData>
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-18" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-58">NewFolder1Copy0</Text>
+      <Text id="ref-39">Artwork</Text>
       <ToolTipText href="#ref-3" />
-      <Name href="#ref-58" />
+      <Name id="ref-40">Artwork</Name>
       <IsChecked>false</IsChecked>
       <ImageIndex>2</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>2</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
-      <ChildCount>1</ChildCount>
-      <children0 href="#ref-59" />
-      <UserData href="#ref-23" />
+      <ChildCount>7</ChildCount>
+      <children0 href="#ref-41" />
+      <children1 href="#ref-42" />
+      <children2 href="#ref-43" />
+      <children3 href="#ref-44" />
+      <children4 href="#ref-45" />
+      <children5 href="#ref-46" />
+      <children6 href="#ref-47" />
+      <UserData id="ref-48">C:\temp\Artwork</UserData>
     </a1:TreeNode>
-    <a1:TreeNode id="ref-19" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-60">NewFolder1Copy1</Text>
+    <a1:TreeNode id="ref-35" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text href="#ref-39" />
       <ToolTipText href="#ref-3" />
+      <Name href="#ref-40" />
+      <IsChecked>false</IsChecked>
+      <ImageIndex>2</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>2</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>2</ChildCount>
+      <children0 href="#ref-49" />
+      <children1 href="#ref-50" />
+      <UserData href="#ref-48" />
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-36" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-51">05. Utrom.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-52">05. Utrom.mp3</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-53">C:\temp\05. Utrom.mp3</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-38" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text href="#ref-39" />
+      <ToolTipText href="#ref-3" />
+      <Name href="#ref-40" />
+      <IsChecked>false</IsChecked>
+      <ImageIndex>2</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>2</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>2</ChildCount>
+      <children0 href="#ref-54" />
+      <children1 href="#ref-55" />
+      <UserData href="#ref-48" />
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-41" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-56">frontback.jpg</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-57">frontback.jpg</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-58">C:\temp\Artwork\frontback.jpg</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-42" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-59">inlay.jpg</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-60">inlay.jpg</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-61">C:\temp\Artwork\inlay.jpg</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-43" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-62">01. Sailor.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-63">01. Sailor.mp3</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-64">C:\temp\01. Sailor.mp3</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-44" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-65">02. Salome.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-66">02. Salome.mp3</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-67">C:\temp\02. Salome.mp3</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-45" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-68">03. Spindulelis.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-69">03. Spindulelis.mp3</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-70">C:\temp\03. Spindulelis.mp3</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-46" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-71">10. Drift.mp3</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-72">10. Drift.mp3</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-73">C:\temp\10. Drift.mp3</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-47" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text id="ref-74">cover.jpg</Text>
+      <ToolTipText href="#ref-19" />
+      <Name id="ref-75">cover.jpg</Name>
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData id="ref-76">C:\temp\cover.jpg</UserData>
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-49" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text href="#ref-56" />
+      <ToolTipText href="#ref-19" />
+      <Name href="#ref-57" />
+      <IsChecked>false</IsChecked>
+      <ImageIndex>-1</ImageIndex>
+      <ImageKey href="#ref-5" />
+      <SelectedImageIndex>-1</SelectedImageIndex>
+      <SelectedImageKey href="#ref-5" />
+      <ChildCount>0</ChildCount>
+      <UserData href="#ref-58" />
+    </a1:TreeNode>
+    <a1:TreeNode id="ref-50" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text href="#ref-59" />
+      <ToolTipText href="#ref-19" />
       <Name href="#ref-60" />
       <IsChecked>false</IsChecked>
-      <ImageIndex>2</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>2</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
-      <ChildCount>1</ChildCount>
-      <children0 href="#ref-61" />
-      <UserData href="#ref-23" />
+      <ChildCount>0</ChildCount>
+      <UserData href="#ref-61" />
     </a1:TreeNode>
-    <a1:TreeNode id="ref-22" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-62">Artwork</Text>
-      <ToolTipText href="#ref-3" />
-      <Name id="ref-63">Artwork</Name>
-      <IsChecked>false</IsChecked>
-      <ImageIndex>2</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>2</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>2</ChildCount>
-      <children0 href="#ref-64" />
-      <children1 href="#ref-65" />
-      <UserData id="ref-66">C:\temp\Artwork</UserData>
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-59" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text href="#ref-62" />
-      <ToolTipText href="#ref-3" />
-      <Name href="#ref-63" />
-      <IsChecked>false</IsChecked>
-      <ImageIndex>2</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>2</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>2</ChildCount>
-      <children0 href="#ref-67" />
-      <children1 href="#ref-68" />
-      <UserData href="#ref-66" />
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-61" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text href="#ref-62" />
-      <ToolTipText href="#ref-3" />
-      <Name href="#ref-63" />
-      <IsChecked>false</IsChecked>
-      <ImageIndex>2</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>2</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>2</ChildCount>
-      <children0 href="#ref-69" />
-      <children1 href="#ref-70" />
-      <UserData href="#ref-66" />
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-64" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-71">frontback.jpg</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-72">frontback.jpg</Name>
+    <a1:TreeNode id="ref-54" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text href="#ref-56" />
+      <ToolTipText href="#ref-19" />
+      <Name href="#ref-57" />
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-73">C:\temp\Artwork\frontback.jpg</UserData>
+      <UserData href="#ref-58" />
     </a1:TreeNode>
-    <a1:TreeNode id="ref-65" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text id="ref-74">inlay.jpg</Text>
-      <ToolTipText href="#ref-25" />
-      <Name id="ref-75">inlay.jpg</Name>
+    <a1:TreeNode id="ref-55" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+      <Text href="#ref-59" />
+      <ToolTipText href="#ref-19" />
+      <Name href="#ref-60" />
       <IsChecked>false</IsChecked>
       <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
       <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
-      <UserData id="ref-76">C:\temp\Artwork\inlay.jpg</UserData>
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-67" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text href="#ref-71" />
-      <ToolTipText href="#ref-25" />
-      <Name href="#ref-72" />
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData href="#ref-73" />
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-68" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text href="#ref-74" />
-      <ToolTipText href="#ref-25" />
-      <Name href="#ref-75" />
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData href="#ref-76" />
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-69" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text href="#ref-71" />
-      <ToolTipText href="#ref-25" />
-      <Name href="#ref-72" />
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData href="#ref-73" />
-    </a1:TreeNode>
-    <a1:TreeNode id="ref-70" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
-      <Text href="#ref-74" />
-      <ToolTipText href="#ref-25" />
-      <Name href="#ref-75" />
-      <IsChecked>false</IsChecked>
-      <ImageIndex>-1</ImageIndex>
-      <ImageKey href="#ref-5" />
-      <SelectedImageIndex>-1</SelectedImageIndex>
-      <SelectedImageKey href="#ref-5" />
-      <ChildCount>0</ChildCount>
-      <UserData href="#ref-76" />
+      <UserData href="#ref-61" />
     </a1:TreeNode>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>

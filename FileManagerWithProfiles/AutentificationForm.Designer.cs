@@ -36,14 +36,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 98);
+            this.textBox1.Location = new System.Drawing.Point(132, 65);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 20);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(187, 124);
+            this.textBox2.Location = new System.Drawing.Point(132, 91);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(156, 20);
@@ -51,7 +51,7 @@
             // 
             // buttonIn
             // 
-            this.buttonIn.Location = new System.Drawing.Point(187, 150);
+            this.buttonIn.Location = new System.Drawing.Point(132, 117);
             this.buttonIn.Name = "buttonIn";
             this.buttonIn.Size = new System.Drawing.Size(75, 23);
             this.buttonIn.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             // buttonUp
             // 
-            this.buttonUp.Location = new System.Drawing.Point(268, 150);
+            this.buttonUp.Location = new System.Drawing.Point(213, 117);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(75, 23);
             this.buttonUp.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 298);
+            this.ClientSize = new System.Drawing.Size(428, 228);
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.textBox2);
