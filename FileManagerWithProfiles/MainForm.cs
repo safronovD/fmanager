@@ -11,20 +11,16 @@ using System.Xml;
 
 namespace FileManagerWithProfiles
 {
-    enum TypeItem
-    {
-        drive,
-        folder,
-        file
-    }
-
     public partial class MainForm : System.Windows.Forms.Form
     {
         private TreeNode _lastSelectNode;
+        private TreeNode _fullNode;
 
         private XmlNode _userNode;
         private XmlDocument _xDoc;
-        private TreeNode _fullNode;
+
+        private String _mode = "Null";
+        private String _selectedProfile = null;
 
         public MainForm()
         {
@@ -63,6 +59,7 @@ namespace FileManagerWithProfiles
             treeView.TopNode = topNode;
             _lastSelectNode = treeView.TopNode;
             _lastSelectNode.Expand();
+            setListView(treeView.TopNode);
         }
 
         private void toolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,9 +119,15 @@ namespace FileManagerWithProfiles
         private void setListView(TreeNode node)
         {
             listView.Items.Clear();
-            //listView.Items.AddRange(GetListViewDirectories(node).ToArray());
-            //listView.Items.AddRange(GetListViewFiles(node).ToArray());
-            listView.Items.AddRange(getVirtualListView(Util.findInTreeNode(_fullNode, node.FullPath)).ToArray());
+            if (_mode.Equals("Real"))
+            {
+                listView.Items.AddRange(GetListViewDirectories(node).ToArray());
+                listView.Items.AddRange(GetListViewFiles(node).ToArray());
+            }
+            if (_mode.Equals("Virtual"))
+            {
+                listView.Items.AddRange(getVirtualListView(Util.findInTreeNode(_fullNode, node.FullPath)).ToArray());
+            }
         }
 
         private List<ListViewItem> getVirtualListView(TreeNode node)
@@ -290,16 +293,25 @@ namespace FileManagerWithProfiles
                 {
                     var selectedItem = listView1.SelectedItems[0];
 
+                    if (_mode.Equals("Virtual"))
+                    {
+                        saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile + ".xml");
+                    }
+
                     if (selectedItem.Group == listView1.Groups["Virtual"])
                     {
                         _fullNode = loadTreeNode(Properties.Settings.Default.profilesPath + @"/" + selectedItem.Name + ".xml");
                         listView.ContextMenuStrip = contextMenuStrip2;
                         initTopNodeWithNode(Util.getFilteredNode(_fullNode));
+                        _mode = "Virtual";
+                        _selectedProfile = selectedItem.Name;
                     } else
                     {
-                        _fullNode = Util.createNodeForSave(_userNode["root"].InnerText);
+                        _fullNode = null;
                         listView.ContextMenuStrip = contextMenuStrip1;
-                        initTopNodeWithNode(_fullNode);
+                        initTopNodeWithPath(_userNode["root"].InnerText);
+                        _mode = "Real";
+                        _selectedProfile = null;
                     }
                 }
             }
@@ -501,7 +513,124 @@ namespace FileManagerWithProfiles
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                TreeNode newNode =new TreeNode();
+                int i = 0;
 
+                while (true)
+                {
+                    string newName = "NewFolder" + i.ToString();
+                    if (_lastSelectNode.Nodes.Find(newName, false).ToList().Count == 0)
+                    {
+                        newNode = new TreeNode
+                        {
+                            ImageIndex = 2,
+                            SelectedImageIndex = 2,
+                            Name = newName,
+                            Text = newName,
+                            Tag = "Virtual",
+                            ToolTipText = "Folder"
+                        };
+                        break;
+                    }
+                    i++;
+                }
+
+                Util.findInTreeNode(_fullNode, _lastSelectNode.FullPath).Nodes.Add(newNode);
+                _lastSelectNode.Nodes.Add(Util.getFilteredNode(newNode));
+
+                setListView(_lastSelectNode);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (ListViewItem selectedItem in listView.SelectedItems)
+                {
+                    TreeNode node = Util.findInTreeNode(_fullNode, _lastSelectNode.FullPath).Nodes.Find(selectedItem.Name, false)[0];
+
+                    Util.findInTreeNode(_fullNode, _lastSelectNode.FullPath).Nodes.RemoveByKey(node.Name);
+                    _lastSelectNode.Nodes.RemoveByKey(node.Name);
+                }
+                setListView(_lastSelectNode);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+        void listView_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(ListView.SelectedListViewItemCollection)))
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+        }
+
+        void listView_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                ListView.SelectedListViewItemCollection dragItems =
+                    (ListView.SelectedListViewItemCollection)e.Data.GetData(typeof(ListView.SelectedListViewItemCollection));
+
+                Point loc = listView.PointToClient(new Point(e.X, e.Y));
+                ListViewItem endItem = listView.GetItemAt(loc.X, loc.Y);
+
+                if (endItem is null)
+                {
+                    return;
+                }
+
+                TreeNode[] tempList = _lastSelectNode.Nodes.Find(endItem.Name, false);
+                
+                if (tempList.Count() == 1)
+                {
+                    TreeNode treeNode = tempList[0];
+                    
+                    foreach (ListViewItem item in dragItems)
+                    {
+                        TreeNode node = Util.findInTreeNode(_fullNode, _lastSelectNode.FullPath).Nodes.Find(item.Name, false)[0];
+
+                        if (treeNode.Nodes.Find(node.Name, false).Count() != 0)
+                        {
+                            throw new ArgumentException("Folder with name " + node.Name + " already exists in " + treeNode.Name);
+                        }
+
+                        Util.findInTreeNode(_fullNode, treeNode.FullPath).Nodes.Add((TreeNode)node.Clone());
+                        Util.findInTreeNode(_fullNode, _lastSelectNode.FullPath).Nodes.RemoveByKey(node.Name);
+
+                        if (node.ToolTipText.Equals("Folder"))
+                        {
+                            treeNode.Nodes.Add(Util.getFilteredNode((TreeNode)node.Clone()));
+                            _lastSelectNode.Nodes.RemoveByKey(node.Name);
+                        }
+                    }
+                }
+
+                setListView(_lastSelectNode);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+        private void listView_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            listView.DoDragDrop(listView.SelectedItems, DragDropEffects.Move);
+        }
+
     }
 }

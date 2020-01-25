@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Folders", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Files", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Drives", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Real", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Virtual", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Folders", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Files", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Drives", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Real", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Virtual", System.Windows.Forms.HorizontalAlignment.Left);
             this.treeView = new System.Windows.Forms.TreeView();
             this.smallIconsImageList = new System.Windows.Forms.ImageList(this.components);
             this.listView = new System.Windows.Forms.ListView();
@@ -90,16 +90,16 @@
             // listView
             // 
             this.listView.ContextMenuStrip = this.contextMenuStrip1;
-            listViewGroup3.Header = "Folders";
-            listViewGroup3.Name = "Folders";
-            listViewGroup4.Header = "Files";
-            listViewGroup4.Name = "Files";
-            listViewGroup5.Header = "Drives";
-            listViewGroup5.Name = "Drives";
+            listViewGroup1.Header = "Folders";
+            listViewGroup1.Name = "Folders";
+            listViewGroup2.Header = "Files";
+            listViewGroup2.Name = "Files";
+            listViewGroup3.Header = "Drives";
+            listViewGroup3.Name = "Drives";
             this.listView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4,
-            listViewGroup5});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.listView.HideSelection = false;
             this.listView.LargeImageList = this.largeIconsImageList;
             this.listView.Location = new System.Drawing.Point(533, 23);
@@ -109,6 +109,11 @@
             this.listView.TabIndex = 1;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.DoubleClick += new System.EventHandler(this.listView_DoubleClick);
+
+            this.listView.AllowDrop = true;
+            this.listView.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listView_ItemDrag);
+            this.listView.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView_DragDrop);
+            this.listView.DragEnter += new System.Windows.Forms.DragEventHandler(this.listView_DragEnter);
             // 
             // contextMenuStrip1
             // 
@@ -216,16 +221,17 @@
             // 
             // listView1
             // 
-            listViewGroup6.Header = "Real";
-            listViewGroup6.Name = "Real";
-            listViewGroup7.Header = "Virtual";
-            listViewGroup7.Name = "Virtual";
+            listViewGroup4.Header = "Real";
+            listViewGroup4.Name = "Real";
+            listViewGroup5.Header = "Virtual";
+            listViewGroup5.Name = "Virtual";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup6,
-            listViewGroup7});
+            listViewGroup4,
+            listViewGroup5});
             this.listView1.HideSelection = false;
             this.listView1.LargeImageList = this.largeIconsImageList;
             this.listView1.Location = new System.Drawing.Point(27, 23);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(168, 499);
             this.listView1.SmallImageList = this.smallIconsImageList;
@@ -253,7 +259,7 @@
             this.toolStripButtonNew.Image = global::FileManagerWithProfiles.Properties.Resources.NewProfile;
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Name = "toolStripButtonNew";
-            this.toolStripButtonNew.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButtonNew.Size = new System.Drawing.Size(21, 20);
             this.toolStripButtonNew.Text = "toolStripButton1";
             this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
@@ -263,7 +269,7 @@
             this.toolStripButtonCopy.Image = global::FileManagerWithProfiles.Properties.Resources.CopyProfile;
             this.toolStripButtonCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCopy.Name = "toolStripButtonCopy";
-            this.toolStripButtonCopy.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButtonCopy.Size = new System.Drawing.Size(21, 20);
             this.toolStripButtonCopy.Text = "toolStripButton2";
             // 
             // toolStripButtonDelete
@@ -272,7 +278,7 @@
             this.toolStripButtonDelete.Image = global::FileManagerWithProfiles.Properties.Resources.DeleteProfile;
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(21, 20);
             this.toolStripButtonDelete.Text = "toolStripButton3";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
@@ -283,19 +289,19 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(141, 70);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.toolStripMenuItem1.Text = "copy";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(140, 22);
             this.toolStripMenuItem2.Text = "create folder";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -304,6 +310,7 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(140, 22);
             this.toolStripMenuItem3.Text = "delete folder";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // MainForm
             // 

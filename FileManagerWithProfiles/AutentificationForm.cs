@@ -70,6 +70,7 @@ namespace FileManagerWithProfiles
             XmlElement rootElem = _xDoc.CreateElement("root");
             XmlElement fontElem = _xDoc.CreateElement("fontColor");
             XmlElement backElem = _xDoc.CreateElement("backColor");
+            XmlElement profilesElem = _xDoc.CreateElement("profiles");
 
             XmlText loginText = _xDoc.CreateTextNode(textBox1.Text);
             XmlText passwordText = _xDoc.CreateTextNode(BCrypt.Net.BCrypt.HashPassword(textBox2.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt()));
@@ -83,12 +84,12 @@ namespace FileManagerWithProfiles
             rootElem.AppendChild(rootText);
             fontElem.AppendChild(fontText);
             backElem.AppendChild(backText);
-            //userElem.SetAttribute(Name, textBox1.Text);
             userElem.AppendChild(loginElem);
             userElem.AppendChild(passwordElem);
             userElem.AppendChild(rootElem);
             userElem.AppendChild(fontElem);
             userElem.AppendChild(backElem);
+            userElem.AppendChild(profilesElem);
             xRoot.AppendChild(userElem);
 
             _xDoc.Save(Properties.Settings.Default.xmlPath);

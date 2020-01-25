@@ -188,7 +188,7 @@ namespace FileManagerWithProfiles
                 TreeNode node = treeNode;
                 for (int i = 2; i < nodeLevels.Count; i++)
                 {
-                    node = treeNode.Nodes.Find(nodeLevels[i], false)[0];
+                    node = node.Nodes.Find(nodeLevels[i], false)[0];
                 }
                 return node;
             }
