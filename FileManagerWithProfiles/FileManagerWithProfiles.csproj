@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TextBoxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextBoxDialog.Designer.cs">
+      <DependentUpon>TextBoxDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,9 @@
     <EmbeddedResource Include="SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxDialog.resx">
+      <DependentUpon>TextBoxDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -125,9 +134,13 @@
     <None Include="images\HardDrive.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\Back.png" />
     <Content Include="images\CopyProfile.png" />
     <Content Include="images\DeleteProfile.png" />
     <Content Include="images\NewProfile.png" />
+    <None Include="images\Rename.png" />
+    <None Include="images\Save.png" />
+    <None Include="images\Settings.png" />
     <Content Include="Users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

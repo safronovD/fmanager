@@ -8,23 +8,13 @@
     <backColor>White</backColor>
     <profiles>
       <profile>
-        <name>NewProfile0</name>
+        <name>NewProfile0r6jy</name>
         <id>0</id>
-        <folder>C:\temp</folder>
+        <folder>F:\temp</folder>
       </profile>
       <profile>
         <name>NewProfile1</name>
         <id>1</id>
-        <folder>C:\temp</folder>
-      </profile>
-      <profile>
-        <name>NewProfile2</name>
-        <id>2</id>
-        <folder>C:\temp</folder>
-      </profile>
-      <profile>
-        <name>NewProfile3</name>
-        <id>3</id>
         <folder>F:\temp</folder>
       </profile>
     </profiles>

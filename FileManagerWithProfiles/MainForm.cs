@@ -20,7 +20,7 @@ namespace FileManagerWithProfiles
         private XmlDocument _xDoc;
 
         private String _mode = "Null";
-        private String _selectedProfile = null;
+        private ListViewItem _selectedProfile = null;
 
         public MainForm()
         {
@@ -375,7 +375,11 @@ namespace FileManagerWithProfiles
 
                     if (_mode.Equals("Virtual"))
                     {
-                        saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile + ".xml");
+                        DialogResult result = MessageBox.Show("Save profile changes in " + _selectedProfile.Name +"?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                        if (result == DialogResult.Yes)
+                        {
+                            saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile.Name + ".xml");
+                        }
                     }
 
                     if (selectedItem.Group == listView1.Groups["Virtual"])
@@ -384,7 +388,7 @@ namespace FileManagerWithProfiles
                         _fullNode = loadTreeNode(Properties.Settings.Default.profilesPath + @"/" + selectedItem.Name + ".xml");
                         listView.ContextMenuStrip = contextMenuStrip2;
                         initTopNodeWithNode(Util.getFilteredNode(_fullNode));
-                        _selectedProfile = selectedItem.Name;
+                        _selectedProfile = selectedItem;
                     } else
                     {
                         _mode = "Real";
@@ -754,5 +758,34 @@ namespace FileManagerWithProfiles
             listView.DoDragDrop(listView.SelectedItems, DragDropEffects.Move);
         }
 
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile.Name + ".xml");
+            MessageBox.Show("Profile changes save.", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            TextBoxDialog dialog = new TextBoxDialog("AA", "Change profile name or cancell:", _selectedProfile.Text);
+            DialogResult result = dialog.ShowDialog();
+
+            if (result == DialogResult.Yes)
+            {
+                string newName = dialog.Text;
+
+                XmlNode xNode = _userNode["profiles"];
+                List<XmlNode> list = xNode.ChildNodes.Cast<XmlNode>()
+               .Where(user => user["id"].InnerText.Equals(_selectedProfile.Name))
+               .ToList();
+
+                if (list.Count == 1)
+                {
+                    list[0]["name"].InnerText = newName;
+                    _xDoc.Save(Properties.Settings.Default.xmlPath);
+                }
+
+                addProfiles(listView1);
+            }
+        }
     }
 }
