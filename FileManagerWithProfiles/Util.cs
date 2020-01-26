@@ -288,7 +288,7 @@ namespace FileManagerWithProfiles
                 foreach (DirectoryInfo subdir in dirs)
                 {
                     string temppath = Path.Combine(destDirName, subdir.Name);
-                    DirectoryCopy(subdir.FullName, temppath, moveSubDirs);
+                    DirectoryMove(subdir.FullName, temppath, moveSubDirs);
                 }
             }
 
