@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <users>
   <user name="">
+    <login>__guest__</login>
+    <password>
+    </password>
+    <root>F:\temp</root>
+    <fontColor>Yellow</fontColor>
+    <backColor>Blue</backColor>
+    <profiles>
+    </profiles>
+  </user>
+  <user name="">
     <login>admin</login>
     <password>$2a$11$K55tf.uGAdhPY8At18wtGuffS.8r70NU0/us2zfSELFdf2MlLd./m</password>
     <root>F:\temp</root>

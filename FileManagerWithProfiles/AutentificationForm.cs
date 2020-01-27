@@ -33,7 +33,7 @@ namespace FileManagerWithProfiles
                 {
                     if (BCrypt.Net.BCrypt.Verify(textBox2.Text + "YYYYY", node["password"].InnerText))
                     {
-                        //Properties.Settings.Default.userName = textBox1.Text;
+                        Properties.Settings.Default.userName = textBox1.Text;
                         Properties.Settings.Default.Save();
                         
                         this.Close();
@@ -95,6 +95,14 @@ namespace FileManagerWithProfiles
             _xDoc.Save(Properties.Settings.Default.xmlPath);
 
             MessageBox.Show("User created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void buttonGuest_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.userName = "__guest__";
+            Properties.Settings.Default.Save();
+
+            this.Close();
         }
     }
 }

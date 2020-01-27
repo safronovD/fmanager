@@ -32,6 +32,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonIn = new System.Windows.Forms.Button();
             this.buttonUp = new System.Windows.Forms.Button();
+            this.buttonGuest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -69,11 +70,22 @@
             this.buttonUp.UseVisualStyleBackColor = true;
             this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
             // 
+            // buttonGuest
+            // 
+            this.buttonGuest.Location = new System.Drawing.Point(132, 170);
+            this.buttonGuest.Name = "buttonGuest";
+            this.buttonGuest.Size = new System.Drawing.Size(156, 23);
+            this.buttonGuest.TabIndex = 4;
+            this.buttonGuest.Text = "Guest Mode";
+            this.buttonGuest.UseVisualStyleBackColor = true;
+            this.buttonGuest.Click += new System.EventHandler(this.buttonGuest_Click);
+            // 
             // AutentificationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 228);
+            this.Controls.Add(this.buttonGuest);
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.textBox2);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button buttonUp;
+        private System.Windows.Forms.Button buttonGuest;
     }
 }
 

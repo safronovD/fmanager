@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Windows.Forms;
 using System.Xml;
+using System.IO.Compression;
 
 namespace FileManagerWithProfiles
 {
@@ -428,6 +429,9 @@ namespace FileManagerWithProfiles
             settingForm.ShowDialog();
             Util.initXMLComponents(ref _xDoc, ref _userNode);
             changeColors(_userNode["fontColor"].InnerText, _userNode["backColor"].InnerText);
+            addProfiles(listView1);
+            treeView.Nodes.Clear();
+            listView.Clear();
         }
 
         private void saveTreeNode(TreeNode treeNode, string path)
@@ -454,6 +458,11 @@ namespace FileManagerWithProfiles
 
             try
             {
+                if (Properties.Settings.Default.userName.Equals("__guest__"))
+                {
+                    throw new ArgumentException("Cannot do it in guest mode.");
+                }
+
                 int i = 0;
                 while (true)
                 {
@@ -716,7 +725,7 @@ namespace FileManagerWithProfiles
                         }
                     }
                 }
-                else if (endItem.Group == listView.Groups["Folder"])
+                else if (endItem.Group == listView.Groups["Folders"])
                 {
                     TreeNode[] tempList = _lastSelectNode.Nodes.Find(endItem.Name, false);
                     if (tempList.Count() == 1)
@@ -951,6 +960,47 @@ namespace FileManagerWithProfiles
                 }
                 setListView(_lastSelectNode);
 
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+        private void archivateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listView.SelectedItems.Count == 1)
+                {
+                    var selectedItem = listView.SelectedItems[0];
+
+                    if (selectedItem.Group == listView.Groups["System"])
+                    {
+                        return;
+                    }
+
+                    if (selectedItem.Group == listView.Groups["Files"])
+                    {
+                        return;
+                    }
+
+                    string path = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + selectedItem.Name;
+                    string newPath = path + ".zip";
+
+                    if (selectedItem.Group == listView.Groups["Folders"])
+                    {
+                        if (Directory.Exists(path))
+                        {
+                            ZipFile.CreateFromDirectory(path, newPath);
+                        }
+                    }
+                }
+
+                _lastSelectNode.Nodes.Clear();
+                _lastSelectNode.Nodes.AddRange(Util.GetTreeNodeDirectories(Util.GetFullPathForSelectedNode(_lastSelectNode)).ToArray());
+                setListView(_lastSelectNode);
             }
             catch (Exception exp)
             {

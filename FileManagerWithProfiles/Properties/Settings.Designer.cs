@@ -34,7 +34,7 @@ namespace FileManagerWithProfiles.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        [global::System.Configuration.DefaultSettingValueAttribute("__guest__")]
         public string userName {
             get {
                 return ((string)(this["userName"]));

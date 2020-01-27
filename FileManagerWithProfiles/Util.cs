@@ -177,16 +177,17 @@ namespace FileManagerWithProfiles
         public static TreeNode findInTreeNode(TreeNode treeNode, String fullPath)
         {
             var nodeLevels = fullPath.Split('\\').ToList();
+            int root = treeNode.Text.Split('\\').ToList().Count;
 
-            if (nodeLevels.Count == 2)
+            if (nodeLevels.Count == root)
             {
                 return treeNode;
             }
 
-            if (nodeLevels.Count > 2)
+            if (nodeLevels.Count > root)
             {
                 TreeNode node = treeNode;
-                for (int i = 2; i < nodeLevels.Count; i++)
+                for (int i = root; i < nodeLevels.Count; i++)
                 {
                     node = node.Nodes.Find(nodeLevels[i], false)[0];
                 }

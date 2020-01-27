@@ -49,6 +49,11 @@ namespace FileManagerWithProfiles
         {
             try
             {
+                if (Properties.Settings.Default.userName.Equals("__guest__"))
+                {
+                    throw new ArgumentException("Cannot do it in guest mode.");
+                }
+
                 if (BCrypt.Net.BCrypt.Verify(textBoxCurPass.Text + "YYYYY", _userNode["password"].InnerText))
                 {
                     _userNode["password"].InnerText = BCrypt.Net.BCrypt.HashPassword(textBoxNewPass.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt());
@@ -76,7 +81,7 @@ namespace FileManagerWithProfiles
             }
         }
 
-        private void addColors (ComboBox comboBox)
+        private void addColors(ComboBox comboBox)
         {
             comboBox.Items.Add(Color.White.Name);
             comboBox.Items.Add(Color.Black.Name);
@@ -108,15 +113,24 @@ namespace FileManagerWithProfiles
 
         private void buttonColorsSave_Click(object sender, EventArgs e)
         {
-            _userNode["fontColor"].InnerText = comboBoxFontColors.SelectedItem.ToString();
-            _userNode["backColor"].InnerText = comboBoxBackColor.SelectedItem.ToString();
-            _xDoc.Save(Properties.Settings.Default.xmlPath);
+            try
+            {
+                _userNode["fontColor"].InnerText = comboBoxFontColors.SelectedItem.ToString();
+                _userNode["backColor"].InnerText = comboBoxBackColor.SelectedItem.ToString();
+                _xDoc.Save(Properties.Settings.Default.xmlPath);
+                MessageBox.Show("Settings saved.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
+    
         private void buttonChangeRootDirectory_Click(object sender, EventArgs e)
         {
             _userNode["root"].InnerText = textBoxRootDirectory.Text;
             _xDoc.Save(Properties.Settings.Default.xmlPath);
+            MessageBox.Show("Settings saved.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
