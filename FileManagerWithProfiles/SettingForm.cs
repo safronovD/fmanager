@@ -54,6 +54,11 @@ namespace FileManagerWithProfiles
                     throw new ArgumentException("Cannot do it in guest mode.");
                 }
 
+                if (!Util.checkPassOrLogin(textBoxNewPass.Text))
+                {
+                    throw new ArgumentException ("Pass is not correct.")
+                }
+
                 if (BCrypt.Net.BCrypt.Verify(textBoxCurPass.Text + "YYYYY", _userNode["password"].InnerText))
                 {
                     _userNode["password"].InnerText = BCrypt.Net.BCrypt.HashPassword(textBoxNewPass.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt());
