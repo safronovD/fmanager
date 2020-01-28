@@ -5,9 +5,9 @@
       <ToolTipText id="ref-3">Folder</ToolTipText>
       <Name id="ref-4">Root</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>2</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey id="ref-5" />
-      <SelectedImageIndex>2</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>6</ChildCount>
       <children0 href="#ref-6" />
@@ -183,9 +183,9 @@
       <ToolTipText id="ref-92">File</ToolTipText>
       <Name id="ref-93">01. Sailor.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-94">F:\temp\erth\01. Sailor.mp3</UserData>
@@ -195,9 +195,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-96">01. Sailor.mp30</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-97">F:\temp\erth\01. Sailor.mp30</UserData>
@@ -207,9 +207,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-99">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-100">F:\temp\erth\06. Sapnai.mp3</UserData>
@@ -219,9 +219,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-102">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-103">F:\temp\erth\07. Day.mp3</UserData>
@@ -231,9 +231,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-105">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-106">F:\temp\erth\08. Good Night.mp3</UserData>
@@ -243,9 +243,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-108">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-109">F:\temp\erth\09. Share My Disease.mp3</UserData>
@@ -255,9 +255,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-111">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-112">F:\temp\erth\10. Drift.mp3</UserData>
@@ -267,9 +267,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-114">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-115">F:\temp\erth\cover.jpg</UserData>
@@ -279,9 +279,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-117">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-118">F:\temp\erth\frontback.jpg</UserData>
@@ -291,9 +291,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-120">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-121">F:\temp\erth\inlay.jpg</UserData>
@@ -331,9 +331,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-133">01. Sailor.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-134">F:\temp\fgngfngf\01. Sailor.mp3</UserData>
@@ -343,9 +343,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-136">01. Sailor.mp30</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-137">F:\temp\fgngfngf\01. Sailor.mp30</UserData>
@@ -355,9 +355,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-139">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-140">F:\temp\fgngfngf\06. Sapnai.mp3</UserData>
@@ -367,9 +367,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-142">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-143">F:\temp\fgngfngf\07. Day.mp3</UserData>
@@ -379,9 +379,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-145">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-146">F:\temp\fgngfngf\08. Good Night.mp3</UserData>
@@ -391,9 +391,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-148">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-149">F:\temp\fgngfngf\09. Share My Disease.mp3</UserData>
@@ -403,9 +403,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-151">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-152">F:\temp\fgngfngf\10. Drift.mp3</UserData>
@@ -415,9 +415,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-154">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-155">F:\temp\fgngfngf\cover.jpg</UserData>
@@ -427,9 +427,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-157">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-158">F:\temp\fgngfngf\frontback.jpg</UserData>
@@ -439,9 +439,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-160">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-161">F:\temp\fgngfngf\inlay.jpg</UserData>
@@ -482,9 +482,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-176">0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-177">F:\temp\gngfn\0.mp3</UserData>
@@ -494,9 +494,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-179">01. Sailor.mp30</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-180">F:\temp\gngfn\01. Sailor.mp30</UserData>
@@ -506,9 +506,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-182">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-183">F:\temp\gngfn\06. Sapnai.mp3</UserData>
@@ -518,9 +518,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-185">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-186">F:\temp\gngfn\07. Day.mp3</UserData>
@@ -530,9 +530,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-188">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-189">F:\temp\gngfn\08. Good Night.mp3</UserData>
@@ -542,9 +542,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-191">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-192">F:\temp\gngfn\09. Share My Disease.mp3</UserData>
@@ -554,9 +554,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-194">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-195">F:\temp\gngfn\10. Drift.mp3</UserData>
@@ -566,9 +566,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-197">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-198">F:\temp\gngfn\cover.jpg</UserData>
@@ -578,9 +578,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-200">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-201">F:\temp\gngfn\frontback.jpg</UserData>
@@ -590,9 +590,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-203">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-204">F:\temp\gngfn\inlay.jpg</UserData>
@@ -710,9 +710,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-251">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-252">F:\temp\erth\Artwork0\frontback.jpg</UserData>
@@ -722,9 +722,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-254">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-255">F:\temp\erth\Artwork0\inlay.jpg</UserData>
@@ -734,9 +734,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-257">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-258">F:\temp\erth\Artwork03r3\08. Good Night.mp3</UserData>
@@ -746,9 +746,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-260">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-261">F:\temp\erth\Artwork03r3\09. Share My Disease.mp3</UserData>
@@ -758,9 +758,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-263">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-264">F:\temp\erth\Artwork03r3\10. Drift.mp3</UserData>
@@ -770,9 +770,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-266">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-267">F:\temp\erth\Artwork03r3\cover.jpg</UserData>
@@ -782,9 +782,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-269">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-270">F:\temp\erth\Artwork03r3\frontback.jpg</UserData>
@@ -794,9 +794,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-272">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-273">F:\temp\erth\Artwork03r3\inlay.jpg</UserData>
@@ -844,9 +844,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-295">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-296">F:\temp\fgngfngf\Artwork0\frontback.jpg</UserData>
@@ -856,9 +856,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-298">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-299">F:\temp\fgngfngf\Artwork0\inlay.jpg</UserData>
@@ -957,9 +957,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-345">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-346">F:\temp\gngfn\rthjtrj\frontback.jpg</UserData>
@@ -969,9 +969,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-348">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-349">F:\temp\gngfn\rthjtrj\inlay.jpg</UserData>
@@ -1019,9 +1019,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-371">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-372">F:\temp\New\Artwork0\frontback.jpg</UserData>
@@ -1031,9 +1031,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-374">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-375">F:\temp\New\Artwork0\inlay.jpg</UserData>
@@ -1081,9 +1081,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-397">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-398">F:\temp\reh\Artwork0\frontback.jpg</UserData>
@@ -1093,9 +1093,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-400">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-401">F:\temp\reh\Artwork0\inlay.jpg</UserData>
@@ -1133,9 +1133,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-413">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-414">F:\temp\erth\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -1145,9 +1145,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-416">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-417">F:\temp\erth\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -1157,9 +1157,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-419">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-420">F:\temp\erth\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -1169,9 +1169,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-422">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-423">F:\temp\erth\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -1181,9 +1181,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-425">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-426">F:\temp\erth\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -1193,9 +1193,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-428">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-429">F:\temp\erth\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -1205,9 +1205,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-431">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-432">F:\temp\erth\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -1217,9 +1217,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-434">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-435">F:\temp\erth\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -1229,9 +1229,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-437">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-438">F:\temp\erth\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -1241,9 +1241,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-440">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-441">F:\temp\erth\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -1253,9 +1253,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-443">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-444">F:\temp\erth\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -1265,9 +1265,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-446">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-447">F:\temp\erth\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -1277,9 +1277,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-449">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-450">F:\temp\erth\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -1289,9 +1289,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-452">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-453">F:\temp\erth\Artwork0\NewFolder0\cover.jpg</UserData>
@@ -1301,9 +1301,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-455">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-456">F:\temp\fgngfngf\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -1313,9 +1313,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-458">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-459">F:\temp\fgngfngf\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -1325,9 +1325,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-461">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-462">F:\temp\fgngfngf\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -1337,9 +1337,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-464">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-465">F:\temp\fgngfngf\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -1349,9 +1349,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-467">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-468">F:\temp\fgngfngf\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -1361,9 +1361,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-470">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-471">F:\temp\fgngfngf\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -1373,9 +1373,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-473">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-474">F:\temp\fgngfngf\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -1385,9 +1385,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-476">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-477">F:\temp\fgngfngf\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -1397,9 +1397,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-479">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-480">F:\temp\fgngfngf\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -1409,9 +1409,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-482">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-483">F:\temp\fgngfngf\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -1421,9 +1421,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-485">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-486">F:\temp\fgngfngf\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -1433,9 +1433,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-488">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-489">F:\temp\fgngfngf\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -1445,9 +1445,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-491">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-492">F:\temp\fgngfngf\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -1457,9 +1457,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-494">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-495">F:\temp\fgngfngf\Artwork0\NewFolder0\cover.jpg</UserData>
@@ -1469,9 +1469,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-497">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-498">F:\temp\gngfn\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -1481,9 +1481,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-500">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-501">F:\temp\gngfn\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -1493,9 +1493,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-503">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-504">F:\temp\gngfn\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -1505,9 +1505,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-506">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-507">F:\temp\gngfn\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -1517,9 +1517,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-509">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-510">F:\temp\gngfn\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -1529,9 +1529,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-512">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-513">F:\temp\gngfn\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -1541,9 +1541,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-515">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-516">F:\temp\gngfn\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -1553,9 +1553,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-518">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-519">F:\temp\gngfn\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -1565,9 +1565,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-521">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-522">F:\temp\gngfn\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -1577,9 +1577,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-524">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-525">F:\temp\gngfn\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -1589,9 +1589,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-527">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-528">F:\temp\gngfn\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -1601,9 +1601,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-530">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-531">F:\temp\gngfn\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -1613,9 +1613,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-533">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-534">F:\temp\gngfn\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -1625,9 +1625,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-536">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-537">F:\temp\gngfn\Artwork0\NewFolder0\cover.jpg</UserData>
@@ -1637,9 +1637,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-539">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-540">F:\temp\gngfn\rthjtrj\NewFolder0\01. Sailor0.mp3</UserData>
@@ -1649,9 +1649,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-542">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-543">F:\temp\gngfn\rthjtrj\NewFolder0\01. Sailor00.mp3</UserData>
@@ -1661,9 +1661,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-545">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-546">F:\temp\gngfn\rthjtrj\NewFolder0\01. Sailor000.mp3</UserData>
@@ -1673,9 +1673,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-548">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-549">F:\temp\gngfn\rthjtrj\NewFolder0\01. Sailor1.mp3</UserData>
@@ -1685,9 +1685,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-551">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-552">F:\temp\gngfn\rthjtrj\NewFolder0\02. Salome.mp3</UserData>
@@ -1697,9 +1697,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-554">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-555">F:\temp\gngfn\rthjtrj\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -1709,9 +1709,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-557">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-558">F:\temp\gngfn\rthjtrj\NewFolder0\04. Svinta.mp3</UserData>
@@ -1721,9 +1721,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-560">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-561">F:\temp\gngfn\rthjtrj\NewFolder0\05. Utrom.mp3</UserData>
@@ -1733,9 +1733,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-563">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-564">F:\temp\gngfn\rthjtrj\NewFolder0\06. Sapnai.mp3</UserData>
@@ -1745,9 +1745,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-566">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-567">F:\temp\gngfn\rthjtrj\NewFolder0\07. Day.mp3</UserData>
@@ -1757,9 +1757,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-569">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-570">F:\temp\gngfn\rthjtrj\NewFolder0\08. Good Night.mp3</UserData>
@@ -1769,9 +1769,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-572">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-573">F:\temp\gngfn\rthjtrj\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -1781,9 +1781,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-575">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-576">F:\temp\gngfn\rthjtrj\NewFolder0\10. Drift.mp3</UserData>
@@ -1793,9 +1793,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-578">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-579">F:\temp\gngfn\rthjtrj\NewFolder0\cover.jpg</UserData>
@@ -1819,9 +1819,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-586">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-587">F:\temp\New\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -1831,9 +1831,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-589">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-590">F:\temp\New\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -1843,9 +1843,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-592">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-593">F:\temp\New\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -1855,9 +1855,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-595">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-596">F:\temp\New\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -1867,9 +1867,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-598">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-599">F:\temp\New\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -1879,9 +1879,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-601">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-602">F:\temp\New\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -1891,9 +1891,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-604">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-605">F:\temp\New\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -1903,9 +1903,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-607">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-608">F:\temp\New\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -1915,9 +1915,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-610">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-611">F:\temp\New\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -1927,9 +1927,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-613">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-614">F:\temp\New\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -1939,9 +1939,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-616">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-617">F:\temp\New\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -1951,9 +1951,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-619">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-620">F:\temp\New\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -1963,9 +1963,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-622">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-623">F:\temp\New\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -1975,9 +1975,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-625">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-626">F:\temp\New\Artwork0\NewFolder0\cover.jpg</UserData>
@@ -1987,9 +1987,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-628">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-629">F:\temp\reh\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -1999,9 +1999,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-631">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-632">F:\temp\reh\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -2011,9 +2011,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-634">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-635">F:\temp\reh\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -2023,9 +2023,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-637">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-638">F:\temp\reh\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -2035,9 +2035,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-640">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-641">F:\temp\reh\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -2047,9 +2047,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-643">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-644">F:\temp\reh\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -2059,9 +2059,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-646">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-647">F:\temp\reh\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -2071,9 +2071,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-649">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-650">F:\temp\reh\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -2083,9 +2083,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-652">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-653">F:\temp\reh\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -2095,9 +2095,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-655">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-656">F:\temp\reh\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -2107,9 +2107,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-658">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-659">F:\temp\reh\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -2119,9 +2119,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-661">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-662">F:\temp\reh\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -2131,9 +2131,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-664">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-665">F:\temp\reh\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -2143,9 +2143,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-667">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-668">F:\temp\reh\Artwork0\NewFolder0\cover.jpg</UserData>
@@ -2193,9 +2193,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-690">frontback.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-691">F:\temp\reh\rtejhtr\Artwork0\frontback.jpg</UserData>
@@ -2205,9 +2205,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-693">inlay.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-694">F:\temp\reh\rtejhtr\Artwork0\inlay.jpg</UserData>
@@ -2255,9 +2255,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-716">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-717">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -2267,9 +2267,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-719">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-720">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -2279,9 +2279,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-722">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-723">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -2291,9 +2291,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-725">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-726">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -2303,9 +2303,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-728">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-729">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -2315,9 +2315,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-731">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-732">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -2327,9 +2327,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-734">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-735">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -2339,9 +2339,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-737">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-738">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -2351,9 +2351,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-740">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-741">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -2363,9 +2363,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-743">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-744">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -2375,9 +2375,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-746">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-747">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -2387,9 +2387,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-749">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-750">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -2399,9 +2399,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-752">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-753">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -2411,9 +2411,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-755">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-756">F:\temp\reh\rtejhtr\Artwork0\NewFolder0\cover.jpg</UserData>
@@ -2423,9 +2423,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-758">01. Sailor0.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-759">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\01. Sailor0.mp3</UserData>
@@ -2435,9 +2435,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-761">01. Sailor00.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-762">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\01. Sailor00.mp3</UserData>
@@ -2447,9 +2447,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-764">01. Sailor000.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-765">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\01. Sailor000.mp3</UserData>
@@ -2459,9 +2459,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-767">01. Sailor1.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-768">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\01. Sailor1.mp3</UserData>
@@ -2471,9 +2471,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-770">02. Salome.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-771">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\02. Salome.mp3</UserData>
@@ -2483,9 +2483,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-773">03. Spindulelis.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-774">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\03. Spindulelis.mp3</UserData>
@@ -2495,9 +2495,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-776">04. Svinta.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-777">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\04. Svinta.mp3</UserData>
@@ -2507,9 +2507,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-779">05. Utrom.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-780">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\05. Utrom.mp3</UserData>
@@ -2519,9 +2519,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-782">06. Sapnai.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-783">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\06. Sapnai.mp3</UserData>
@@ -2531,9 +2531,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-785">07. Day.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-786">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\07. Day.mp3</UserData>
@@ -2543,9 +2543,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-788">08. Good Night.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-789">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\08. Good Night.mp3</UserData>
@@ -2555,9 +2555,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-791">09. Share My Disease.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-792">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\09. Share My Disease.mp3</UserData>
@@ -2567,9 +2567,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-794">10. Drift.mp3</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-795">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\10. Drift.mp3</UserData>
@@ -2579,9 +2579,9 @@
       <ToolTipText href="#ref-92" />
       <Name id="ref-797">cover.jpg</Name>
       <IsChecked>false</IsChecked>
-      <ImageIndex>1</ImageIndex>
+      <ImageIndex>-1</ImageIndex>
       <ImageKey href="#ref-5" />
-      <SelectedImageIndex>1</SelectedImageIndex>
+      <SelectedImageIndex>-1</SelectedImageIndex>
       <SelectedImageKey href="#ref-5" />
       <ChildCount>0</ChildCount>
       <UserData id="ref-798">F:\temp\gngfn\rthjtrj\ytj\Artwork0\NewFolder0\cover.jpg</UserData>

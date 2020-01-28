@@ -1042,5 +1042,56 @@ namespace FileManagerWithProfiles
             }
             finally { }
         }
+
+        private void toolStripButtonCopy_Click(object sender, EventArgs e)
+        {
+            string path = Properties.Settings.Default.profilesPath;
+
+            try
+            {
+                if (Properties.Settings.Default.userName.Equals("__guest__"))
+                {
+                    throw new ArgumentException("Cannot do it in guest mode.");
+                }
+
+                if (_selectedProfile is null)
+                {
+                    throw new Exception("Chouse Profile.");
+                }
+
+                int i = 0;
+                while (true)
+                {
+                    string filePath = path + @"/" + i.ToString() + ".xml";
+                    if (!File.Exists(filePath))
+                    {
+                        File.Copy(path + @"/" + _selectedProfile.Name + ".xml", filePath);
+
+                        XmlElement profileElem = _xDoc.CreateElement("profile");
+                        XmlElement profileName = _xDoc.CreateElement("name");
+                        profileName.AppendChild(_xDoc.CreateTextNode(_selectedProfile.Text + i.ToString()));
+                        XmlElement profileID = _xDoc.CreateElement("id");
+                        profileID.AppendChild(_xDoc.CreateTextNode(i.ToString()));
+                        XmlElement profileFolder = _xDoc.CreateElement("folder");
+                        profileFolder.AppendChild(_xDoc.CreateTextNode(_userNode["root"].InnerText));
+                        profileElem.AppendChild(profileName);
+                        profileElem.AppendChild(profileID);
+                        profileElem.AppendChild(profileFolder);
+                        _userNode["profiles"].AppendChild(profileElem);
+                        _xDoc.Save(Properties.Settings.Default.xmlPath);
+
+                        break;
+                    }
+                    i++;
+                }
+
+                addProfiles(listView1);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
     }
 }

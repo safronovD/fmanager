@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -133,9 +134,21 @@ namespace FileManagerWithProfiles
     
         private void buttonChangeRootDirectory_Click(object sender, EventArgs e)
         {
-            _userNode["root"].InnerText = textBoxRootDirectory.Text;
-            _xDoc.Save(Properties.Settings.Default.xmlPath);
-            MessageBox.Show("Settings saved.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            try
+            {
+                if (Directory.Exists(textBoxRootDirectory.Text))
+                {
+                    throw new ArgumentException("Directory does not exist.");
+                }
+
+                _userNode["root"].InnerText = textBoxRootDirectory.Text;
+                _xDoc.Save(Properties.Settings.Default.xmlPath);
+                MessageBox.Show("Settings saved.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
