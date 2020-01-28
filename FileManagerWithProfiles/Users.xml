@@ -4,7 +4,7 @@
     <login>__guest__</login>
     <password>
     </password>
-    <root>F:\temp</root>
+    <root>C:\temp</root>
     <fontColor>Yellow</fontColor>
     <backColor>Blue</backColor>
     <profiles>
@@ -26,6 +26,33 @@
         <name>NewProfile1</name>
         <id>1</id>
         <folder>F:\temp</folder>
+      </profile>
+    </profiles>
+  </user>
+  <user>
+    <login>uhfg</login>
+    <password>$2a$11$MSv1C/WD9XR/b/1.zLaWe.6uhpgBv9ADTorfBuv0G..HdRGsFSAxK</password>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
+    <profiles />
+  </user>
+  <user>
+    <login>111</login>
+    <password>$2a$11$igqsKIaQcugMZCVs69Xr8eqjN2P1VWotlDd.SUU6GwMvLqali0IpG</password>
+    <root>C:\temp</root>
+    <fontColor>White</fontColor>
+    <backColor>Black</backColor>
+    <profiles>
+      <profile>
+        <name>rtret</name>
+        <id>2</id>
+        <folder>C:\temp</folder>
+      </profile>
+      <profile>
+        <name>NewProfile3</name>
+        <id>3</id>
+        <folder>C:\temp</folder>
       </profile>
     </profiles>
   </user>

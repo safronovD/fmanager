@@ -295,5 +295,23 @@ namespace FileManagerWithProfiles
 
             dir.Delete();
         }
+
+        public static bool checkPassOrLogin(string str)
+        {
+            if (str.Length == 0)
+            {
+                return false;
+            }
+
+            foreach (char c in str)
+            {
+                if (!Char.IsLetterOrDigit(c))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

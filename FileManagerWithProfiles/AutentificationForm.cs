@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -52,49 +53,75 @@ namespace FileManagerWithProfiles
 
         private void buttonUp_Click(object sender, EventArgs e)
         {
-            XmlElement xRoot = _xDoc.DocumentElement;
-
-            foreach (XmlNode node in xRoot)
+            try
             {
-                if (node["login"].InnerText == textBox1.Text)
+                XmlElement xRoot = _xDoc.DocumentElement;
+
+                if (!Util.checkPassOrLogin(textBox1.Text))
                 {
-                    MessageBox.Show("Login already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    throw new ArgumentException("Login is incorrect.");
                 }
+
+                if (!Util.checkPassOrLogin(textBox2.Text))
+                {
+                    throw new ArgumentException("Password is incorrect.");
+                }
+
+                foreach (XmlNode node in xRoot)
+                {
+                    if (node["login"].InnerText == textBox1.Text)
+                    {
+                        throw new ArgumentException("Login already exists.");
+                    }
+                }
+
+                XmlElement userElem = _xDoc.CreateElement("user");
+                XmlAttribute nameAttr = _xDoc.CreateAttribute("name");
+                XmlElement loginElem = _xDoc.CreateElement("login");
+                XmlElement passwordElem = _xDoc.CreateElement("password");
+                XmlElement rootElem = _xDoc.CreateElement("root");
+                XmlElement fontElem = _xDoc.CreateElement("fontColor");
+                XmlElement backElem = _xDoc.CreateElement("backColor");
+                XmlElement profilesElem = _xDoc.CreateElement("profiles");
+
+                XmlText loginText = _xDoc.CreateTextNode(textBox1.Text);
+                XmlText passwordText = _xDoc.CreateTextNode(BCrypt.Net.BCrypt.HashPassword(textBox2.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt()));
+                XmlText rootText = _xDoc.CreateTextNode(@"C:\temp");
+                XmlText fontText = _xDoc.CreateTextNode("Black");
+                XmlText backText = _xDoc.CreateTextNode("White");
+
+                nameAttr.AppendChild(loginText);
+                loginElem.AppendChild(loginText);
+                passwordElem.AppendChild(passwordText);
+                rootElem.AppendChild(rootText);
+                fontElem.AppendChild(fontText);
+                backElem.AppendChild(backText);
+                userElem.AppendChild(loginElem);
+                userElem.AppendChild(passwordElem);
+                userElem.AppendChild(rootElem);
+                userElem.AppendChild(fontElem);
+                userElem.AppendChild(backElem);
+                userElem.AppendChild(profilesElem);
+                xRoot.AppendChild(userElem);
+
+                _xDoc.Save(Properties.Settings.Default.xmlPath);
+
+                MessageBox.Show("User created.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                Properties.Settings.Default.userName = textBox1.Text;
+                Properties.Settings.Default.Save();
+
+                if (!Directory.Exists(@"C:\temp"))
+                {
+                    Directory.CreateDirectory(@"C:\temp");
+                }
+
+                this.Close();
             }
-
-            XmlElement userElem = _xDoc.CreateElement("user");
-            XmlAttribute nameAttr = _xDoc.CreateAttribute("name");
-            XmlElement loginElem = _xDoc.CreateElement("login");
-            XmlElement passwordElem = _xDoc.CreateElement("password");
-            XmlElement rootElem = _xDoc.CreateElement("root");
-            XmlElement fontElem = _xDoc.CreateElement("fontColor");
-            XmlElement backElem = _xDoc.CreateElement("backColor");
-            XmlElement profilesElem = _xDoc.CreateElement("profiles");
-
-            XmlText loginText = _xDoc.CreateTextNode(textBox1.Text);
-            XmlText passwordText = _xDoc.CreateTextNode(BCrypt.Net.BCrypt.HashPassword(textBox2.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt()));
-            XmlText rootText = _xDoc.CreateTextNode(@"C:\temp");
-            XmlText fontText = _xDoc.CreateTextNode("Black");
-            XmlText backText = _xDoc.CreateTextNode("White");
-
-            nameAttr.AppendChild(loginText);
-            loginElem.AppendChild(loginText);
-            passwordElem.AppendChild(passwordText);
-            rootElem.AppendChild(rootText);
-            fontElem.AppendChild(fontText);
-            backElem.AppendChild(backText);
-            userElem.AppendChild(loginElem);
-            userElem.AppendChild(passwordElem);
-            userElem.AppendChild(rootElem);
-            userElem.AppendChild(fontElem);
-            userElem.AppendChild(backElem);
-            userElem.AppendChild(profilesElem);
-            xRoot.AppendChild(userElem);
-
-            _xDoc.Save(Properties.Settings.Default.xmlPath);
-
-            MessageBox.Show("User created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonGuest_Click(object sender, EventArgs e)

@@ -392,7 +392,7 @@ namespace FileManagerWithProfiles
 
                     if (_mode.Equals("Virtual"))
                     {
-                        DialogResult result = MessageBox.Show("Save profile changes in " + _selectedProfile.Name +"?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                        DialogResult result = MessageBox.Show("Save profile changes in " + _selectedProfile.Text +"?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                         if (result == DialogResult.Yes)
                         {
                             saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile.Name + ".xml");
@@ -503,10 +503,10 @@ namespace FileManagerWithProfiles
             List<ListViewItem> newListViewItemList = new List<ListViewItem>(2);
 
             ListViewItem listViewItem = new ListViewItem();
-            listViewItem.Name = "Computer";
-            listViewItem.Text = "Computer";
-            listViewItem.Group = listView1.Groups["Real"];
-            newListViewItemList.Add(listViewItem);
+            //listViewItem.Name = "Computer";
+            //listViewItem.Text = "Computer";
+            //listViewItem.Group = listView1.Groups["Real"];
+            //newListViewItemList.Add(listViewItem);
 
             listViewItem = new ListViewItem();
             listViewItem.Name = "Folder";
@@ -834,31 +834,55 @@ namespace FileManagerWithProfiles
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile.Name + ".xml");
-            MessageBox.Show("Profile changes save.", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            TextBoxDialog dialog = new TextBoxDialog("AA", "Change profile name or cancell:", _selectedProfile.Text);
-            DialogResult result = dialog.ShowDialog();
-
-            if (result == DialogResult.Yes)
+            try
             {
-                string newName = dialog.Text;
-
-                XmlNode xNode = _userNode["profiles"];
-                List<XmlNode> list = xNode.ChildNodes.Cast<XmlNode>()
-               .Where(user => user["id"].InnerText.Equals(_selectedProfile.Name))
-               .ToList();
-
-                if (list.Count == 1)
+                if (_selectedProfile is null)
                 {
-                    list[0]["name"].InnerText = newName;
-                    _xDoc.Save(Properties.Settings.Default.xmlPath);
+                    throw new ArgumentException("Chouse profile.");
                 }
 
-                addProfiles(listView1);
+                saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile.Name + ".xml");
+                MessageBox.Show("Profile changes save.", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
+        }
+
+            private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_selectedProfile is null)
+                {
+                    throw new Exception("Chouse profile.");
+                }
+
+                TextBoxDialog dialog = new TextBoxDialog("AA", "Change profile name or cancell:", _selectedProfile.Text);
+                DialogResult result = dialog.ShowDialog();
+
+                if (result == DialogResult.Yes)
+                {
+                    string newName = dialog.Text;
+
+                    XmlNode xNode = _userNode["profiles"];
+                    List<XmlNode> list = xNode.ChildNodes.Cast<XmlNode>()
+                   .Where(user => user["id"].InnerText.Equals(_selectedProfile.Name))
+                   .ToList();
+
+                    if (list.Count == 1)
+                    {
+                        list[0]["name"].InnerText = newName;
+                        _xDoc.Save(Properties.Settings.Default.xmlPath);
+                    }
+
+                    addProfiles(listView1);
+                }
+            } catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -976,6 +1000,9 @@ namespace FileManagerWithProfiles
                 {
                     var selectedItem = listView.SelectedItems[0];
 
+                    string path = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + selectedItem.Name;
+                    string newPath = path + ".zip";
+
                     if (selectedItem.Group == listView.Groups["System"])
                     {
                         return;
@@ -983,12 +1010,19 @@ namespace FileManagerWithProfiles
 
                     if (selectedItem.Group == listView.Groups["Files"])
                     {
-                        return;
+                        if (File.Exists(path))
+                        {
+                            string tempPath = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + "temp" + @"\" + selectedItem.Name;
+
+                            Directory.CreateDirectory(Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + "temp");
+                            File.Move(path, tempPath);
+                            ZipFile.CreateFromDirectory(Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + "temp", newPath);
+
+                            File.Move(tempPath, path);
+                            Directory.Delete(Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + "temp");
+                        }
                     }
-
-                    string path = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + selectedItem.Name;
-                    string newPath = path + ".zip";
-
+                    
                     if (selectedItem.Group == listView.Groups["Folders"])
                     {
                         if (Directory.Exists(path))
