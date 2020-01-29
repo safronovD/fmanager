@@ -136,7 +136,7 @@ namespace FileManagerWithProfiles
         {
             try
             {
-                if (Directory.Exists(textBoxRootDirectory.Text))
+                if (!Directory.Exists(textBoxRootDirectory.Text))
                 {
                     throw new ArgumentException("Directory does not exist.");
                 }

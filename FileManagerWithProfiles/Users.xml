@@ -4,56 +4,19 @@
     <login>__guest__</login>
     <password>
     </password>
-    <root>C:\tempfhnh</root>
-    <fontColor>Yellow</fontColor>
-    <backColor>Blue</backColor>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
     <profiles>
     </profiles>
   </user>
-  <user name="">
+  <user>
     <login>admin</login>
-    <password>$2a$11$K55tf.uGAdhPY8At18wtGuffS.8r70NU0/us2zfSELFdf2MlLd./m</password>
-    <root>F:\temp</root>
-    <fontColor>Black</fontColor>
-    <backColor>White</backColor>
-    <profiles>
-      <profile>
-        <name>NewProfile0</name>
-        <id>0</id>
-        <folder>F:\temp</folder>
-      </profile>
-      <profile>
-        <name>NewProfile1</name>
-        <id>1</id>
-        <folder>F:\temp</folder>
-      </profile>
-    </profiles>
-  </user>
-  <user>
-    <login>uhfg</login>
-    <password>$2a$11$MSv1C/WD9XR/b/1.zLaWe.6uhpgBv9ADTorfBuv0G..HdRGsFSAxK</password>
+    <password>$2a$11$zBLQRbpiB1GJ2KMSej/x4OhJrJxnks42OKNMQHwSkZvFw4L0dVCHe</password>
     <root>C:\temp</root>
     <fontColor>Black</fontColor>
     <backColor>White</backColor>
-    <profiles />
-  </user>
-  <user>
-    <login>111</login>
-    <password>$2a$11$igqsKIaQcugMZCVs69Xr8eqjN2P1VWotlDd.SUU6GwMvLqali0IpG</password>
-    <root>C:\temp</root>
-    <fontColor>White</fontColor>
-    <backColor>Black</backColor>
     <profiles>
-      <profile>
-        <name>rtret</name>
-        <id>2</id>
-        <folder>C:\temp</folder>
-      </profile>
-      <profile>
-        <name>NewProfile3</name>
-        <id>3</id>
-        <folder>C:\temp</folder>
-      </profile>
     </profiles>
   </user>
 </users>
