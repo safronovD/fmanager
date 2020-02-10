@@ -10,7 +10,7 @@ using System.IO;
 
 namespace FileManagerWithProfiles
 {
-    static class Util
+    static public class Util
     {
         static public void initXMLComponents(ref XmlDocument xDoc, ref XmlNode userNode)
         {
