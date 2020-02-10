@@ -8,6 +8,6 @@ env:
         - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
 script:
-    - dotnet build FSharpWebAppWithCIDemo.sln -c Release
+    - dotnet build FileManagerWithProfiles.sln -c Release
 
-    - dotnet test -c Release --no-build BllTest/BllTest.fsproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    - dotnet test -c Release --no-build FileManagerWithProfiles.UnitTests/FileManagerWithProfiles.UnitTests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
