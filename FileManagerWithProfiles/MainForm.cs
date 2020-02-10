@@ -379,6 +379,11 @@ namespace FileManagerWithProfiles
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            if (_lastSelectNode is null)
+            {
+                return;
+            }
+
             treeView.SelectedNode = _lastSelectNode.Parent;
         }
 

@@ -26,6 +26,8 @@ namespace FileManagerWithProfiles
             {
                 Application.Run(new MainForm());
             }
+
+            Properties.Settings.Default.userName = null;
         }
     }
 }
