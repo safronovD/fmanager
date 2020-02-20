@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/safronovD/fmanager.svg?branch=master)](https://travis-ci.org/safronovD/fmanager)
+[![Build Status](https://travis-ci.com/safronovD/fmanager.svg?branch=master)](https://travis-ci.com/safronovD/fmanager)
 
 # fmanager
