@@ -19,4 +19,44 @@
     <profiles>
     </profiles>
   </user>
+  <user>
+    <login>admin3</login>
+    <password>$2a$11$ebGhudLsTM280Mv1XDCwUOjpsyYHM15mIfF7EEZW86IZiJ3smz2yq</password>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
+    <profiles />
+  </user>
+  <user>
+    <login>ffsdf</login>
+    <password>$2a$11$ON9jWvUAifBESTH0oyTzVuBZoQ7YGlT17dcvfWL5/57.Rvkp0ZbWG</password>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
+    <profiles />
+  </user>
+  <user>
+    <login>ffr</login>
+    <password>$2a$11$8OlUY1pa9gPZunwcQXhYU.G2Or3lqKIs0LihT9VyuaTjttTWd412.</password>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
+    <profiles />
+  </user>
+  <user>
+    <login>trofim</login>
+    <password>$2a$11$JwD3lR3Bi4rp.DsYZYjqqulin9vvkfRe933.iGfDOH0MkMhPOKG0e</password>
+    <root>C:\temp</root>
+    <fontColor>Black</fontColor>
+    <backColor>White</backColor>
+    <profiles />
+  </user>
+  <user>
+    <login>tim</login>
+    <password>$2a$11$aYSghmzbyR7LeoT5VXBdpu.MX7uyVuFM.CcxrljovRgSHj5ETQnZK</password>
+    <root>C:\temp</root>
+    <fontColor>Red</fontColor>
+    <backColor>Yellow</backColor>
+    <profiles />
+  </user>
 </users>

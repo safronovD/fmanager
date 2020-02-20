@@ -32,7 +32,7 @@ namespace FileManagerWithProfiles
             {
                 if (node["login"].InnerText == textBox1.Text)
                 {
-                    if (BCrypt.Net.BCrypt.Verify(textBox2.Text + "YYYYY", node["password"].InnerText))
+                    if (Util.PasswordHandler.Validate(textBox2.Text + "YYYYY", node["password"].InnerText))
                     {
                         Properties.Settings.Default.userName = textBox1.Text;
                         Properties.Settings.Default.Save();
@@ -85,7 +85,7 @@ namespace FileManagerWithProfiles
                 XmlElement profilesElem = _xDoc.CreateElement("profiles");
 
                 XmlText loginText = _xDoc.CreateTextNode(textBox1.Text);
-                XmlText passwordText = _xDoc.CreateTextNode(BCrypt.Net.BCrypt.HashPassword(textBox2.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt()));
+                XmlText passwordText = _xDoc.CreateTextNode(Util.PasswordHandler.CreatePasswordHash(textBox2.Text + "YYYYY"));
                 XmlText rootText = _xDoc.CreateTextNode(@"C:\temp");
                 XmlText fontText = _xDoc.CreateTextNode("Black");
                 XmlText backText = _xDoc.CreateTextNode("White");
