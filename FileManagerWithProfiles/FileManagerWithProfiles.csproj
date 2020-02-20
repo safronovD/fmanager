@@ -60,6 +60,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,9 +87,6 @@
       <Version>3.16.1</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="SoapFormatter">
-      <Version>1.0.11</Version>
     </PackageReference>
     <PackageReference Include="System.Resources.Extensions" Version="4.7.0" />
     <Reference Include="System.Xml" />
