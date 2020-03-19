@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -33,14 +27,16 @@ namespace FileManagerWithProfiles
 
                 textBoxRootDirectory.Text = _userNode["root"].InnerText;
 
-            } catch (ArgumentException exp)
+            }
+            catch (ArgumentException exp)
             {
                 MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (exp.ParamName == "XmlDocument")
                 {
                     Application.Exit();
                 }
-            } catch (Exception exp)
+            }
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -71,7 +67,8 @@ namespace FileManagerWithProfiles
                 {
                     MessageBox.Show("Current password is not correct.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } catch (Exception exp)
+            }
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -131,7 +128,7 @@ namespace FileManagerWithProfiles
                 MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
         private void buttonChangeRootDirectory_Click(object sender, EventArgs e)
         {
             try

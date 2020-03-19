@@ -1,5 +1,5 @@
-using NUnit.Framework;
 using FileManagerWithProfiles;
+using NUnit.Framework;
 
 namespace Tests
 {
@@ -33,8 +33,8 @@ namespace Tests
         {
             Assert.DoesNotThrow(() => new AutentificationForm());
         }
-        
-        #endregion    
+
+        #endregion
 
         #region Main Tests
 
@@ -43,8 +43,8 @@ namespace Tests
         {
             Assert.DoesNotThrow(() => new MainForm());
         }
-        
-        #endregion    
+
+        #endregion
 
         #region Settings Tests
 
@@ -53,7 +53,7 @@ namespace Tests
         {
             Assert.DoesNotThrow(() => new SettingForm());
         }
-        
-        #endregion    
+
+        #endregion
     }
 }

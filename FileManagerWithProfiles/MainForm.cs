@@ -4,11 +4,11 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Windows.Forms;
 using System.Xml;
-using System.IO.Compression;
 
 namespace FileManagerWithProfiles
 {
@@ -105,7 +105,8 @@ namespace FileManagerWithProfiles
                         if (File.Exists(path))
                         {
                             Process.Start(path);
-                        } else
+                        }
+                        else
                         {
                             throw new ArgumentException("File " + listView.SelectedItems[0].Name + " moved or renamed");
                         }
@@ -167,19 +168,20 @@ namespace FileManagerWithProfiles
                 listViewItem.Name = Path.GetFileName(childNode.Name);
                 listViewItem.Text = Path.GetFileName(childNode.Text);
 
-                switch (childNode.ToolTipText) {
+                switch (childNode.ToolTipText)
+                {
                     case "File":
-                    {
-                        listViewItem.ImageIndex = 1;
-                        listViewItem.Group = listView.Groups["Files"];
-                        break;
-                    }
+                        {
+                            listViewItem.ImageIndex = 1;
+                            listViewItem.Group = listView.Groups["Files"];
+                            break;
+                        }
                     case "Folder":
-                    {
-                        listViewItem.ImageIndex = 2;
-                        listViewItem.Group = listView.Groups["Folders"];
-                        break;
-                    }
+                        {
+                            listViewItem.ImageIndex = 2;
+                            listViewItem.Group = listView.Groups["Folders"];
+                            break;
+                        }
                 }
 
                 newListViewItemList.Add(listViewItem);
@@ -291,7 +293,8 @@ namespace FileManagerWithProfiles
                 _lastSelectNode.Nodes.AddRange(Util.GetTreeNodeDirectories(Util.GetFullPathForSelectedNode(_lastSelectNode)).ToArray());
                 setListView(_lastSelectNode);
 
-            } catch (Exception exp)
+            }
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -397,7 +400,7 @@ namespace FileManagerWithProfiles
 
                     if (_mode.Equals("Virtual"))
                     {
-                        DialogResult result = MessageBox.Show("Save profile changes in " + _selectedProfile.Text +"?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                        DialogResult result = MessageBox.Show("Save profile changes in " + _selectedProfile.Text + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                         if (result == DialogResult.Yes)
                         {
                             saveTreeNode(_fullNode, Properties.Settings.Default.profilesPath + @"/" + _selectedProfile.Name + ".xml");
@@ -411,7 +414,8 @@ namespace FileManagerWithProfiles
                         listView.ContextMenuStrip = contextMenuStrip2;
                         initTopNodeWithNode(Util.getFilteredNode(_fullNode));
                         _selectedProfile = selectedItem;
-                    } else
+                    }
+                    else
                     {
                         _mode = "Real";
                         _fullNode = null;
@@ -629,7 +633,7 @@ namespace FileManagerWithProfiles
         {
             try
             {
-                TreeNode newNode =new TreeNode();
+                TreeNode newNode = new TreeNode();
                 int i = 0;
 
                 while (true)
@@ -856,7 +860,7 @@ namespace FileManagerWithProfiles
             finally { }
         }
 
-            private void toolStripButton2_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -885,7 +889,8 @@ namespace FileManagerWithProfiles
 
                     addProfiles(listView1);
                 }
-            } catch (Exception exp)
+            }
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -911,7 +916,7 @@ namespace FileManagerWithProfiles
                     {
                         string path = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + selectedItem.Name;
                         string newPath = Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + dialog.Text;
-                        
+
                         if (selectedItem.Group == listView.Groups["Files"])
                         {
                             if (File.Exists(path))
@@ -919,7 +924,8 @@ namespace FileManagerWithProfiles
                                 if (!File.Exists(newPath))
                                 {
                                     File.Move(path, newPath);
-                                } else
+                                }
+                                else
                                 {
                                     throw new ArgumentException("File " + dialog.Text + " already exists.");
                                 }
@@ -932,7 +938,8 @@ namespace FileManagerWithProfiles
                                 if (!Directory.Exists(newPath))
                                 {
                                     Util.DirectoryMove(path, newPath, true);
-                                } else
+                                }
+                                else
                                 {
                                     throw new ArgumentException("Folder " + dialog.Text + " already exists.");
                                 }
@@ -1027,7 +1034,7 @@ namespace FileManagerWithProfiles
                             Directory.Delete(Util.GetFullPathForSelectedNode(_lastSelectNode) + @"\" + "temp");
                         }
                     }
-                    
+
                     if (selectedItem.Group == listView.Groups["Folders"])
                     {
                         if (Directory.Exists(path))

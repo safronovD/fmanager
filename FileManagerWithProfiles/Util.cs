@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.ComponentModel;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml;
 
 namespace FileManagerWithProfiles
 {
@@ -71,7 +69,7 @@ namespace FileManagerWithProfiles
                 return sha.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
-       
+
 
 
         static public void initXMLComponents(ref XmlDocument xDoc, ref XmlNode userNode)
@@ -275,14 +273,14 @@ namespace FileManagerWithProfiles
             {
                 Directory.CreateDirectory(destDirName);
             }
-            
+
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
                 string temppath = Path.Combine(destDirName, file.Name);
                 file.CopyTo(temppath, false);
             }
-            
+
             if (copySubDirs)
             {
                 foreach (DirectoryInfo subdir in dirs)

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -35,11 +29,12 @@ namespace FileManagerWithProfiles
                     {
                         Properties.Settings.Default.userName = textBox1.Text;
                         Properties.Settings.Default.Save();
-                        
+
                         this.Close();
 
                         return;
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("Password is not correct.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
