@@ -60,9 +60,9 @@ namespace FileManagerWithProfiles
                     throw new ArgumentException("Pass is not correct.");
                 }
 
-                if (BCrypt.Net.BCrypt.Verify(textBoxCurPass.Text + "YYYYY", _userNode["password"].InnerText))
+                if (Util.PasswordHandler.Validate(textBoxCurPass.Text + "YYYYY", _userNode["password"].InnerText))
                 {
-                    _userNode["password"].InnerText = BCrypt.Net.BCrypt.HashPassword(textBoxNewPass.Text + "YYYYY", BCrypt.Net.BCrypt.GenerateSalt());
+                    _userNode["password"].InnerText = Util.PasswordHandler.CreatePasswordHash(textBoxNewPass.Text + "YYYYY");
                     _xDoc.Save(Properties.Settings.Default.xmlPath);
 
                     MessageBox.Show("Password changed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
