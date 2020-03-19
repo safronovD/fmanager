@@ -17,6 +17,16 @@
     <fontColor>Black</fontColor>
     <backColor>White</backColor>
     <profiles>
+      <profile>
+        <name>NewProfile0</name>
+        <id>0</id>
+        <folder>C:\temp</folder>
+      </profile>
+      <profile>
+        <name>NewProfile1</name>
+        <id>1</id>
+        <folder>C:\temp</folder>
+      </profile>
     </profiles>
   </user>
 </users>

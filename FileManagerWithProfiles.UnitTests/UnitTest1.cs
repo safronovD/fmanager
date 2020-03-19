@@ -25,5 +25,35 @@ namespace Tests
         }
 
         #endregion
+
+        #region Auth Tests
+
+        [Test]
+        public void AutentificationForm()
+        {
+            Assert.DoesNotThrow(() => new AutentificationForm());
+        }
+        
+        #endregion    
+
+        #region Main Tests
+
+        [Test]
+        public void MainForm()
+        {
+            Assert.DoesNotThrow(() => new MainForm());
+        }
+        
+        #endregion    
+
+        #region Settings Tests
+
+        [Test]
+        public void SettingsForm()
+        {
+            Assert.DoesNotThrow(() => new SettingForm());
+        }
+        
+        #endregion    
     }
 }

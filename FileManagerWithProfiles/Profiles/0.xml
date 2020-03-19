@@ -1,0 +1,120 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:TreeNode id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-3">C:\temp</Text>
+<ToolTipText id="ref-4">Folder</ToolTipText>
+<Name id="ref-5">Root</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>-1</ImageIndex>
+<ImageKey id="ref-6"></ImageKey>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>5</ChildCount>
+<children0 href="#ref-7"/>
+<children1 href="#ref-8"/>
+<children2 href="#ref-9"/>
+<children3 href="#ref-10"/>
+<children4 href="#ref-11"/>
+<UserData href="#ref-3"/>
+</a1:TreeNode>
+<a1:TreeNode id="ref-7" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-12">Artwork</Text>
+<ToolTipText href="#ref-4"/>
+<Name id="ref-13">Artwork</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>2</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>2</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>3</ChildCount>
+<children0 href="#ref-14"/>
+<children1 href="#ref-15"/>
+<children2 href="#ref-16"/>
+<UserData id="ref-17">C:\temp\Artwork</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-8" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-18">NewFolder0</Text>
+<ToolTipText href="#ref-4"/>
+<Name id="ref-19">NewFolder0</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>2</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>2</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-20">C:\temp\NewFolder0</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-9" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-21">06. Sapnai.mp3</Text>
+<ToolTipText id="ref-22">File</ToolTipText>
+<Name id="ref-23">06. Sapnai.mp3</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>-1</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-24">C:\temp\06. Sapnai.mp3</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-10" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-25">07. Day.mp3</Text>
+<ToolTipText href="#ref-22"/>
+<Name id="ref-26">07. Day.mp3</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>-1</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-27">C:\temp\07. Day.mp3</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-11" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-28">08. Good Night.mp3</Text>
+<ToolTipText href="#ref-22"/>
+<Name id="ref-29">08. Good Night.mp3</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>-1</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-30">C:\temp\08. Good Night.mp3</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-14" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-31">NewFolder0</Text>
+<ToolTipText href="#ref-4"/>
+<Name id="ref-32">NewFolder0</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>2</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>2</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-33">C:\temp\Artwork\NewFolder0</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-15" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-34">frontback.jpg</Text>
+<ToolTipText href="#ref-22"/>
+<Name id="ref-35">frontback.jpg</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>-1</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-36">C:\temp\Artwork\frontback.jpg</UserData>
+</a1:TreeNode>
+<a1:TreeNode id="ref-16" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/System.Windows.Forms/System.Windows.Forms%2C%20Version%3D4.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Db77a5c561934e089">
+<Text id="ref-37">inlay.jpg</Text>
+<ToolTipText href="#ref-22"/>
+<Name id="ref-38">inlay.jpg</Name>
+<IsChecked>false</IsChecked>
+<ImageIndex>-1</ImageIndex>
+<ImageKey href="#ref-6"/>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<SelectedImageKey href="#ref-6"/>
+<ChildCount>0</ChildCount>
+<UserData id="ref-39">C:\temp\Artwork\inlay.jpg</UserData>
+</a1:TreeNode>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
