@@ -1,6 +1,7 @@
 using FileManagerWithProfiles;
 using NUnit.Framework;
 
+
 namespace Tests
 {
     public class UnitTests
@@ -30,7 +31,17 @@ namespace Tests
             string pass = "password";
             string hashed = Util.PasswordHandler.CreatePasswordHash(pass);
 
-            Assert.Equals(hashed.Length, 256);
+            Assert.AreEqual(hashed.Length, 106);
+        }
+
+        [Test]
+        public void Validation()
+        {
+
+            string pass = "password";
+            string hashed = Util.PasswordHandler.CreatePasswordHash(pass);
+
+            Assert.IsTrue(Util.PasswordHandler.Validate(pass, hashed));
         }
 
         #endregion
