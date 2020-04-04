@@ -1,7 +1,6 @@
 language: csharp
 
-dotnet: 3.0.100
-
+dotnet: 2.1.512
 sudo: required
 
 install:

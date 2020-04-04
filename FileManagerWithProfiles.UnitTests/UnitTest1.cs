@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    public class Tests
+    public class UnitTests
     {
         [SetUp]
         public void Setup()
@@ -24,34 +24,13 @@ namespace Tests
             Assert.IsFalse(Util.checkPassOrLogin("__admin"));
         }
 
-        #endregion
-
-        #region Auth Tests
-
         [Test]
-        public void AutentificationForm()
+        public void HashSize()
         {
-            Assert.DoesNotThrow(() => new AutentificationForm());
-        }
+            string pass = "password";
+            string hashed = Util.PasswordHandler.CreatePasswordHash(pass);
 
-        #endregion
-
-        #region Main Tests
-
-        [Test]
-        public void MainForm()
-        {
-            Assert.DoesNotThrow(() => new MainForm());
-        }
-
-        #endregion
-
-        #region Settings Tests
-
-        [Test]
-        public void SettingsForm()
-        {
-            Assert.DoesNotThrow(() => new SettingForm());
+            Assert.Equals(hashed.Length, 256);
         }
 
         #endregion
